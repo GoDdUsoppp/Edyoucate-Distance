@@ -118,6 +118,19 @@
         }
       }
     </style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .odo-wrap {
+          @apply inline-flex overflow-hidden h-[1.1em] leading-[1.1em] align-bottom;
+        }
+        .odo-col {
+          @apply flex flex-col transition-transform ease-[cubic-bezier(0.16,1,0.3,1)];
+        }
+        .odo-digit {
+          @apply h-[1.1em] flex items-center justify-center;
+        }
+      }
+    </style>
   </head>
   <body
     class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900"
@@ -169,8 +182,6 @@
               Explore Programs
             </button>
           </div>
-
-          
         </div>
 
         <div class="relative flex justify-center items-center mt-8 lg:mt-0">
@@ -194,51 +205,155 @@
               allowfullscreen
             >
             </iframe>
-            <div
-              class="absolute bottom-6 left-6 z-10 flex items-center gap-2 bg-[#0b1226]/55 border border-white/10 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-md"
-            >
-              <span
-                class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-dot"
-              ></span>
-              Live program walkthrough
-            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div
-      class="flex flex-wrap justify-center border-b border-gray-200 bg-white px-2"
+      class="bg-[#0b1226] border-t border-white/10 py-10 px-4 relative z-10"
+      id="stats-section"
     >
       <div
-        class="flex-1 min-w-[140px] p-4 text-center border-b sm:border-b-0 sm:border-r border-gray-200"
+        class="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-14"
       >
-        <div class="font-space text-xl font-bold text-indigo-600">500+</div>
-        <div class="text-xs text-slate-500 mt-1">Students guided</div>
-      </div>
-      <div
-        class="flex-1 min-w-[140px] p-4 text-center border-b sm:border-b-0 sm:border-r border-gray-200"
-      >
-        <div class="font-space text-xl font-bold text-indigo-600">4</div>
-        <div class="text-xs text-slate-500 mt-1">Partner universities</div>
-      </div>
-      <div
-        class="flex-1 min-w-[140px] p-4 text-center border-b sm:border-b-0 md:border-r border-gray-200"
-      >
-        <div class="font-space text-xl font-bold text-indigo-600">100%</div>
-        <div class="text-xs text-slate-500 mt-1">UGC-DEB approved</div>
-      </div>
-      <div
-        class="flex-1 min-w-[140px] p-4 text-center border-b sm:border-b-0 sm:border-r border-gray-200"
-      >
-        <div class="font-space text-xl font-bold text-indigo-600">Free</div>
-        <div class="text-xs text-slate-500 mt-1">Counseling session</div>
-      </div>
-      <div class="flex-1 min-w-[140px] p-4 text-center">
-        <div class="font-space text-xl font-bold text-indigo-600">Surat</div>
-        <div class="text-xs text-slate-500 mt-1">Based & trusted</div>
+        <div class="text-center min-w-[130px]">
+          <div
+            class="font-space text-3xl font-bold text-indigo-400 flex items-center justify-center"
+          >
+            <span class="stat-counter" data-target="5000">0</span>+
+          </div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            Students guided
+          </div>
+        </div>
+
+        <div class="text-center min-w-[130px]">
+          <div
+            class="font-space text-3xl font-bold text-indigo-400 flex items-center justify-center"
+          >
+            <span class="stat-counter" data-target="25">0</span>+
+          </div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            Partner universities
+          </div>
+        </div>
+
+        <div class="text-center min-w-[130px]">
+          <div
+            class="font-space text-3xl font-bold text-indigo-400 flex items-center justify-center"
+          >
+            <span class="stat-counter" data-target="100">0</span>%
+          </div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            UGC-DEB approved
+          </div>
+        </div>
+
+        <div class="text-center min-w-[130px]">
+          <div
+            class="font-space text-3xl font-bold text-indigo-400 flex items-center justify-center"
+          >
+            <span class="stat-counter" data-target="4.9">0</span>/5
+          </div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            Google Rating
+          </div>
+        </div>
+
+        <div class="text-center min-w-[130px]">
+          <div class="font-space text-3xl font-bold text-indigo-400">Free</div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            Counseling session
+          </div>
+        </div>
+
+        <div class="text-center min-w-[130px]">
+          <div class="font-space text-3xl font-bold text-indigo-400">Surat</div>
+          <div
+            class="text-xs text-indigo-100/60 mt-1.5 uppercase tracking-wider font-medium"
+          >
+            Based & trusted
+          </div>
+        </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".stat-counter");
+
+        counters.forEach((counter) => {
+          const targetStr = counter.getAttribute("data-target");
+          const digits = targetStr.split("");
+
+          counter.innerHTML = "";
+          counter.classList.add("odo-wrap");
+
+          digits.forEach((digit, index) => {
+            const col = document.createElement("div");
+            col.className = "odo-col";
+
+            const finalDigit = parseInt(digit, 10);
+
+            // Handle decimals cleanly
+            if (isNaN(finalDigit)) {
+              col.innerHTML = `<div class="odo-digit">${digit}</div>`;
+              col.dataset.offset = 0;
+            } else {
+              col.style.transitionDuration = `${2 + index * 0.4}s`;
+
+              let stripHTML = "";
+              const spins = 2;
+              for (let i = 0; i < spins; i++) {
+                for (let j = 0; j <= 9; j++)
+                  stripHTML += `<div class="odo-digit">${j}</div>`;
+              }
+
+              for (let j = 0; j <= finalDigit; j++) {
+                stripHTML += `<div class="odo-digit">${j}</div>`;
+              }
+
+              col.innerHTML = stripHTML;
+              col.dataset.offset = spins * 10 + finalDigit;
+            }
+
+            counter.appendChild(col);
+          });
+        });
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const cols = entry.target.querySelectorAll(".odo-col");
+                cols.forEach((col) => {
+                  const offset = col.dataset.offset;
+                  col.style.transform = `translateY(-${offset * 1.1}em)`;
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+
+        const statsSection = document.getElementById("stats-section");
+        if (statsSection) {
+          observer.observe(statsSection);
+        }
+      });
+    </script>
 
     <section class="py-16 px-4 max-w-6xl mx-auto">
       <div

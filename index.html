@@ -135,6 +135,104 @@
   <body
     class="text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900"
   >
+    <!-- Sticky Navigation -->
+    <nav
+      id="main-nav"
+      class="sticky top-0 z-50 transition-all duration-300 bg-[#0b1226]/80 backdrop-blur-xl border-b border-white/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4"
+      >
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <img src="logo.png" alt="edYOUcate" class="h-12 w-30" />
+        </a>
+
+        <div
+          class="hidden lg:flex items-center gap-1 text-sm font-medium text-indigo-100/70"
+        >
+          <a
+            href="#"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#programs"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Programs</a
+          >
+          <a
+            href="#universities"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Universities</a
+          >
+          <a
+            href="#process"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Process</a
+          >
+          <a
+            href="#stories"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Success Stories</a
+          >
+          <a
+            href="#faq"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button
+            class="hidden sm:inline-flex bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-sm px-5 py-2.5 rounded-xl font-semibold shadow-[0_8px_20px_-8px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-250"
+          >
+            Book Free Counseling ↗
+          </button>
+          <button
+            id="nav-toggle"
+            class="lg:hidden text-white p-2 rounded-lg hover:bg-white/5"
+            aria-label="Toggle menu"
+          >
+            <i class="ti ti-menu-2 text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden border-t border-white/10 bg-[#0b1226]/95 px-4 py-3 flex flex-col gap-1 text-sm font-medium text-indigo-100/80"
+      >
+        <a href="#" class="px-3 py-2.5 rounded-lg hover:bg-white/5">Home</a>
+        <a href="#programs" class="px-3 py-2.5 rounded-lg hover:bg-white/5"
+          >Programs</a
+        >
+        <a href="#universities" class="px-3 py-2.5 rounded-lg hover:bg-white/5"
+          >Universities</a
+        >
+        <a href="#process" class="px-3 py-2.5 rounded-lg hover:bg-white/5"
+          >Process</a
+        >
+        <a href="#stories" class="px-3 py-2.5 rounded-lg hover:bg-white/5"
+          >Success Stories</a
+        >
+        <a href="#faq" class="px-3 py-2.5 rounded-lg hover:bg-white/5">FAQ</a>
+        <a href="#contact" class="px-3 py-2.5 rounded-lg hover:bg-white/5"
+          >Contact</a
+        >
+        <button
+          class="mt-2 bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-sm px-5 py-3 rounded-xl font-semibold"
+        >
+          Book Free Counseling ↗
+        </button>
+      </div>
+    </nav>
+
     <div class="relative overflow-hidden bg-[#0b1226] pt-20 pb-24 px-4 sm:px-6">
       <div
         class="absolute inset-0 bg-aurora-gradient animate-aurora pointer-events-none"
@@ -355,7 +453,64 @@
       });
     </script>
 
-    <section class="py-16 px-4 max-w-6xl mx-auto">
+    <!-- ===================== ABOUT / STORY SECTION ===================== -->
+    <section class="relative bg-white py-20 px-4 overflow-hidden">
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+  
+  <div class="relative max-w-6xl mx-auto">
+    <div class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2">
+      About edYOUcate
+    </div>
+    <h2 class="font-space text-3xl sm:text-4xl font-bold text-slate-900 mb-3 tracking-tight max-w-2xl">
+      Surat's most trusted online education consultancy
+    </h2>
+    <p class="text-sm text-slate-500 mb-10 max-w-2xl">
+      Who we are, what we believe in, and why 500+ students trust us
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
+      
+      <div class="h-full lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 sm:p-9 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 flex items-center justify-center mb-6 text-indigo-500 text-xl border border-indigo-50">
+          <i class="ti ti-bulb"></i>
+        </div>
+        
+        <p class="text-[18px] text-slate-600 leading-relaxed mb-5">
+          <span class="font-space font-bold text-slate-900">edYOUcate</span> is a Surat-based education consultancy founded with one simple belief — that every student and working professional deserves access to quality higher education, <strong class="text-slate-800 font-semibold">no matter their schedule, budget, or background.</strong>
+        </p>
+        
+        <p class="text-[18px] text-slate-600 leading-relaxed mb-5">
+          We saw too many talented people in Gujarat give up on their education dreams because traditional colleges didn't fit their lives. Full-time attendance, high fees, rigid schedules — these were barriers that <strong class="text-slate-800 font-semibold">shouldn't exist in today's world.</strong>
+        </p>
+        
+        <p class="text-[18px] text-slate-600 leading-relaxed mb-8">
+          So we built <span class="font-space font-bold text-slate-900">edYOUcate</span> — a consultancy that puts students first. We don't just help you enroll; we understand your life situation, recommend the right program honestly, handle all the paperwork, and support you long after admission day.
+        </p>
+
+        
+      </div>
+
+      <div class="h-full relative rounded-3xl p-7 sm:p-9 bg-[#0b1226] overflow-hidden flex flex-col justify-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        <div class="absolute inset-0 bg-aurora-gradient animate-aurora pointer-events-none opacity-80"></div>
+        
+        <div class="absolute -top-4 -right-2 font-space text-[120px] leading-none text-white/5 font-bold pointer-events-none select-none">"</div>
+
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-1.5 bg-white/10 border border-white/10 text-indigo-100 text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 backdrop-blur-md">
+            <i class="ti ti-target text-sky-300"></i> Our Mission
+          </div>
+          <p class="font-space text-xl sm:text-2xl text-white leading-snug italic font-medium">
+            "To empower every student and working professional in Surat with flexible, affordable, and career-focused higher education — so no one has to choose between their job, family, and academic future."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- =================== END ABOUT / STORY SECTION =================== -->
+
+    <section id="who-we-help" class="py-20 px-4 max-w-6xl mx-auto">
       <div
         class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2"
       >
@@ -366,27 +521,67 @@
       >
         Built for students & working professionals
       </h2>
-      <p class="text-sm text-slate-500 mb-8 max-w-2xl">
-        Choose your profile to see how edYOUcate helps you specifically
+      <p class="text-sm text-slate-500 mb-10 max-w-2xl">
+        Pick the path that sounds like you — we'll show what edYOUcate solves
+        for that journey
       </p>
 
-      <div class="flex flex-wrap gap-2 mb-8">
-        <div
-          class="tab px-5 py-2 rounded-full text-[13px] cursor-pointer border transition-all duration-200 active bg-gradient-to-br from-indigo-500 to-purple-500 text-white border-transparent shadow-[0_6px_16px_-6px_rgba(99,102,241,0.55)]"
+      <div
+        class="relative grid grid-cols-1 lg:grid-cols-2 rounded-3xl border border-gray-200 overflow-hidden shadow-sm"
+      >
+        <!-- Student side -->
+        <button
           onclick="switchTab(this, 'student')"
+          class="audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-gradient-to-br from-indigo-500 to-purple-500 text-white"
+          data-panel="student"
         >
-          <i class="ti ti-school"></i> Students
-        </div>
-        <div
-          class="tab px-5 py-2 rounded-full text-[13px] cursor-pointer border border-gray-200 text-slate-500 bg-white hover:bg-gray-50 transition-all duration-200"
+          <div
+            class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl backdrop-blur-md"
+          >
+            <i class="ti ti-school"></i>
+          </div>
+          <h3 class="font-space text-2xl font-bold mb-2">Students</h3>
+          <p class="text-sm text-white/80 leading-relaxed max-w-sm">
+            Just finished school or college and want a flexible, affordable path
+            to a recognized degree — without the rigidity of regular campus
+            life.
+          </p>
+          <div
+            class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold bg-white/15 px-3.5 py-1.5 rounded-full backdrop-blur-md"
+          >
+            Viewing this path <i class="ti ti-arrow-right"></i>
+          </div>
+        </button>
+
+        <!-- Professional side -->
+        <button
           onclick="switchTab(this, 'professional')"
+          class="audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-white text-slate-900 border-l border-gray-200"
+          data-panel="professional"
         >
-          <i class="ti ti-briefcase"></i> Working professionals
-        </div>
+          <div
+            class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 flex items-center justify-center mb-6 text-xl text-indigo-500"
+          >
+            <i class="ti ti-briefcase"></i>
+          </div>
+          <h3 class="font-space text-2xl font-bold mb-2">
+            Working professionals
+          </h3>
+          <p class="text-sm text-slate-500 leading-relaxed max-w-sm">
+            Already working full-time and want a recognized PG degree to unlock
+            promotions — without quitting your job or losing your salary.
+          </p>
+          <div
+            class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-500 group-hover:gap-2.5 transition-all"
+          >
+            Tap to view this path <i class="ti ti-arrow-right"></i>
+          </div>
+        </button>
       </div>
 
+      <!-- Content cards -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6"
         id="pain-content"
       >
         <div
@@ -456,7 +651,7 @@
       </div>
     </section>
 
-    <section class="bg-slate-50 py-16 px-4">
+    <section id="programs" class="bg-slate-50 py-20 px-4">
       <div class="max-w-6xl mx-auto">
         <div
           class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2"
@@ -472,9 +667,60 @@
           UGC-DEB approved programs from India's recognized universities
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-5">
+          <!-- PG: featured, spans full height on the left -->
           <div
-            class="bg-white rounded-2xl p-6 border border-gray-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="relative lg:row-span-2 bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-3xl p-7 sm:p-8 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col"
+          >
+            <div
+              class="absolute top-5 right-5 bg-white/15 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-md"
+            >
+              Most popular
+            </div>
+            <div
+              class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-2xl mb-5 backdrop-blur-md"
+            >
+              💼
+            </div>
+            <h3 class="font-space text-2xl font-bold mb-3">
+              Postgraduate (PG)
+            </h3>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span
+                class="bg-white/15 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur-md"
+                >MBA</span
+              >
+              <span
+                class="bg-white/15 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur-md"
+                >MCA</span
+              >
+              <span
+                class="bg-white/15 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur-md"
+                >MA</span
+              >
+              <span
+                class="bg-white/15 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur-md"
+                >M.Com</span
+              >
+              <span
+                class="bg-white/15 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur-md"
+                >MSc</span
+              >
+            </div>
+            <p class="text-sm text-white/80 leading-relaxed mb-6">
+              Advance your career with a recognized PG degree. Study after work.
+              Get promoted faster.
+            </p>
+            <div
+              class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold bg-white/15 backdrop-blur-md px-4 py-2.5 rounded-xl cursor-pointer hover:bg-white/25 transition-colors w-fit"
+            >
+              View PG programs <i class="ti ti-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- UG -->
+          <div
+            class="bg-white rounded-3xl p-7 border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
           >
             <div class="text-2xl mb-3">🎓</div>
             <h3 class="font-space text-lg font-semibold text-slate-900 mb-2">
@@ -507,59 +753,15 @@
               programs, fully online.
             </p>
             <div
-              class="text-xs text-indigo-500 font-semibold cursor-pointer hover:text-indigo-600 transition-colors"
+              class="mt-auto text-xs text-indigo-500 font-semibold cursor-pointer hover:text-indigo-600 transition-colors"
             >
               View UG programs →
             </div>
           </div>
 
+          <!-- Diploma -->
           <div
-            class="relative bg-gradient-to-br from-white to-violet-50 rounded-2xl p-6 border-2 border-indigo-500 hover:-translate-y-1 hover:shadow-lg transition-all duration-250 mt-4 md:mt-0"
-          >
-            <div
-              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-br from-indigo-500 to-purple-500 text-white text-[11px] font-bold px-3 py-1 rounded-full whitespace-nowrap shadow-md"
-            >
-              Most popular
-            </div>
-            <div class="text-2xl mb-3 mt-1">💼</div>
-            <h3 class="font-space text-lg font-semibold text-slate-900 mb-2">
-              Postgraduate (PG)
-            </h3>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span
-                class="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-full"
-                >MBA</span
-              >
-              <span
-                class="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-full"
-                >MCA</span
-              >
-              <span
-                class="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-full"
-                >MA</span
-              >
-              <span
-                class="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-full"
-                >M.Com</span
-              >
-              <span
-                class="bg-indigo-50 text-indigo-700 text-[11px] font-medium px-2.5 py-1 rounded-full"
-                >MSc</span
-              >
-            </div>
-            <p class="text-xs text-slate-500 leading-relaxed mb-4">
-              Advance your career with a recognized PG degree. Study after work.
-              Get promoted faster.
-            </p>
-            <div
-              class="text-xs text-indigo-500 font-semibold cursor-pointer hover:text-indigo-600 transition-colors"
-            >
-              View PG programs →
-            </div>
-          </div>
-
-          <div
-            class="bg-white rounded-2xl p-6 border border-gray-200 hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="bg-white rounded-3xl p-7 border border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
           >
             <div class="text-2xl mb-3">📜</div>
             <h3 class="font-space text-lg font-semibold text-slate-900 mb-2">
@@ -584,16 +786,67 @@
               Industry-focused.
             </p>
             <div
-              class="text-xs text-indigo-500 font-semibold cursor-pointer hover:text-indigo-600 transition-colors"
+              class="mt-auto text-xs text-indigo-500 font-semibold cursor-pointer hover:text-indigo-600 transition-colors"
             >
               View courses →
+            </div>
+          </div>
+
+          <!-- Comparison strip spanning bottom-right -->
+          <div
+            class="lg:col-span-2 bg-white rounded-3xl p-7 border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <h4
+              class="font-space text-sm font-semibold text-slate-900 mb-4 flex items-center gap-2"
+            >
+              <i class="ti ti-arrows-left-right text-indigo-500"></i> Quick
+              comparison
+            </h4>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div
+                  class="text-[11px] text-slate-400 uppercase tracking-wider mb-1.5"
+                >
+                  Duration
+                </div>
+                <div class="text-sm font-semibold text-slate-900">
+                  UG 3 yrs · PG 2 yrs
+                </div>
+                <div class="text-sm font-semibold text-slate-900">
+                  Diploma 6–12 mo
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-[11px] text-slate-400 uppercase tracking-wider mb-1.5"
+                >
+                  Cost vs regular
+                </div>
+                <div class="text-sm font-semibold text-slate-900">
+                  60–80% cheaper
+                </div>
+                <div class="text-xs text-slate-500">EMI options available</div>
+              </div>
+              <div>
+                <div
+                  class="text-[11px] text-slate-400 uppercase tracking-wider mb-1.5"
+                >
+                  Recognition
+                </div>
+                <div class="text-sm font-semibold text-slate-900">
+                  100% UGC-DEB approved
+                </div>
+                <div class="text-xs text-slate-500">
+                  Valid for govt & private jobs
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-16 px-4 max-w-6xl mx-auto">
+    <section id="process" class="py-20 px-4 max-w-4xl mx-auto">
       <div
         class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2"
       >
@@ -604,69 +857,129 @@
       >
         Get admitted in 4 simple steps
       </h2>
-      <p class="text-sm text-slate-500 mb-12 max-w-2xl">
+      <p class="text-sm text-slate-500 mb-14 max-w-2xl">
         From first call to enrolled student — we handle everything
       </p>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative step-line"
-      >
-        <div class="text-center relative z-10 px-4">
+      <div class="relative">
+        <div
+          class="absolute left-1/2 top-2 bottom-2 w-px bg-gray-200 -translate-x-1/2 hidden sm:block"
+        ></div>
+
+        <div
+          class="relative flex flex-col sm:flex-row items-center gap-6 mb-10 sm:mb-4"
+        >
+          <div class="flex-1 sm:text-right sm:pr-10">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-250"
+            >
+              <div
+                class="text-[11px] font-semibold text-indigo-500 uppercase tracking-widest mb-1"
+              >
+                Step 01
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 mb-1.5">
+                Free counseling
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Tell us your goals, background & budget. We listen, not sell.
+              </p>
+            </div>
+          </div>
           <div
-            class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 flex items-center justify-center text-xl text-indigo-500 mb-4 shadow-sm"
+            class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg z-10 order-first sm:order-none"
           >
             <i class="ti ti-phone-call"></i>
           </div>
-          <h4 class="text-sm font-semibold text-slate-900 mb-1">
-            Free counseling
-          </h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Tell us your goals, background & budget. We listen, not sell.
-          </p>
+          <div class="flex-1 sm:pl-10 hidden sm:block"></div>
         </div>
-        <div class="text-center relative z-10 px-4">
+
+        <div
+          class="relative flex flex-col sm:flex-row items-center gap-6 mb-10 sm:mb-4"
+        >
+          <div class="flex-1 sm:pr-10 hidden sm:block"></div>
           <div
-            class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 flex items-center justify-center text-xl text-indigo-500 mb-4 shadow-sm"
+            class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg z-10"
           >
             <i class="ti ti-school"></i>
           </div>
-          <h4 class="text-sm font-semibold text-slate-900 mb-1">
-            University selection
-          </h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            We recommend the best university & program for your career.
-          </p>
+          <div class="flex-1 sm:pl-10">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-250"
+            >
+              <div
+                class="text-[11px] font-semibold text-indigo-500 uppercase tracking-widest mb-1"
+              >
+                Step 02
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 mb-1.5">
+                University selection
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                We recommend the best university & program for your career.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="text-center relative z-10 px-4">
+
+        <div
+          class="relative flex flex-col sm:flex-row items-center gap-6 mb-10 sm:mb-4"
+        >
+          <div class="flex-1 sm:text-right sm:pr-10">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-250"
+            >
+              <div
+                class="text-[11px] font-semibold text-indigo-500 uppercase tracking-widest mb-1"
+              >
+                Step 03
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 mb-1.5">
+                Documentation
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                We collect and verify all documents. Zero errors, fast
+                processing.
+              </p>
+            </div>
+          </div>
           <div
-            class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 flex items-center justify-center text-xl text-indigo-500 mb-4 shadow-sm"
+            class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg z-10 order-first sm:order-none"
           >
             <i class="ti ti-file-check"></i>
           </div>
-          <h4 class="text-sm font-semibold text-slate-900 mb-1">
-            Documentation
-          </h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            We collect and verify all documents. Zero errors, fast processing.
-          </p>
+          <div class="flex-1 sm:pl-10 hidden sm:block"></div>
         </div>
-        <div class="text-center relative z-10 px-4">
+
+        <div class="relative flex flex-col sm:flex-row items-center gap-6">
+          <div class="flex-1 sm:pr-10 hidden sm:block"></div>
           <div
-            class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 flex items-center justify-center text-xl text-indigo-500 mb-4 shadow-sm"
+            class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex items-center justify-center text-xl shadow-lg z-10"
           >
             <i class="ti ti-circle-check"></i>
           </div>
-          <h4 class="text-sm font-semibold text-slate-900 mb-1">
-            Enrollment done
-          </h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            You're enrolled. We support you throughout your degree.
-          </p>
+          <div class="flex-1 sm:pl-10">
+            <div
+              class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-250"
+            >
+              <div
+                class="text-[11px] font-semibold text-emerald-500 uppercase tracking-widest mb-1"
+              >
+                Step 04
+              </div>
+              <h4 class="text-base font-semibold text-slate-900 mb-1.5">
+                Enrollment done
+              </h4>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                You're enrolled. We support you throughout your degree.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-slate-50 py-16 px-4">
+    <section id="universities" class="bg-slate-50 py-20 px-4">
       <div class="max-w-6xl mx-auto">
         <div
           class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2"
@@ -683,95 +996,136 @@
           recognized
         </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+          <!-- Trust banner spanning full width -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col sm:flex-row gap-4 items-start hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="lg:col-span-4 bg-[#0b1226] rounded-3xl p-7 sm:p-8 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6"
           >
             <div
-              class="w-11 h-11 rounded-xl flex items-center justify-center text-[13px] font-bold shrink-0 bg-blue-50 text-blue-900"
+              class="absolute inset-0 bg-aurora-gradient animate-aurora pointer-events-none opacity-70"
+            ></div>
+            <div class="relative z-10">
+              <h3
+                class="font-space text-xl sm:text-2xl font-bold text-white mb-1"
+              >
+                4 partner universities, 100% UGC-DEB approved
+              </h3>
+              <p class="text-sm text-white/70 max-w-md">
+                Every degree is fully recognized by the Government of India —
+                accepted for government jobs, private sector, and higher
+                studies.
+              </p>
+            </div>
+            <div class="relative z-10 flex items-center gap-2 text-white/90">
+              <i class="ti ti-shield-check text-2xl text-sky-300"></i>
+              <span class="font-space text-sm font-semibold"
+                >UGC-DEB Approved</span
+              >
+            </div>
+          </div>
+
+          <!-- JAIN Online: featured, spans 2 cols -->
+          <div
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center text-base font-bold shrink-0 bg-blue-50 text-blue-900"
             >
               JO
             </div>
             <div>
-              <h4 class="text-sm font-semibold text-slate-900 mb-1">
+              <h4
+                class="font-space text-lg font-semibold text-slate-900 mb-1.5"
+              >
                 JAIN Online
               </h4>
-              <p class="text-xs text-slate-500 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed mb-3">
                 India's most popular online university. Wide range of UG & PG
                 programs with industry-integrated curriculum.
               </p>
               <div
-                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full mt-2.5"
+                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full"
               >
                 <i class="ti ti-shield-check"></i> UGC-DEB Approved
               </div>
             </div>
           </div>
 
+          <!-- Mangalayatan -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col sm:flex-row gap-4 items-start hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
             <div
-              class="w-11 h-11 rounded-xl flex items-center justify-center text-[13px] font-bold shrink-0 bg-green-50 text-green-800"
+              class="w-14 h-14 rounded-2xl flex items-center justify-center text-base font-bold shrink-0 bg-green-50 text-green-800"
             >
               MU
             </div>
             <div>
-              <h4 class="text-sm font-semibold text-slate-900 mb-1">
+              <h4
+                class="font-space text-lg font-semibold text-slate-900 mb-1.5"
+              >
                 Mangalayatan University
               </h4>
-              <p class="text-xs text-slate-500 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed mb-3">
                 Trusted distance education with a wide program range suitable
                 for students and professionals alike.
               </p>
               <div
-                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full mt-2.5"
+                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full"
               >
                 <i class="ti ti-shield-check"></i> UGC-DEB Approved
               </div>
             </div>
           </div>
 
+          <!-- Subharti -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col sm:flex-row gap-4 items-start hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
             <div
-              class="w-11 h-11 rounded-xl flex items-center justify-center text-[13px] font-bold shrink-0 bg-orange-50 text-orange-800"
+              class="w-14 h-14 rounded-2xl flex items-center justify-center text-base font-bold shrink-0 bg-orange-50 text-orange-800"
             >
               SU
             </div>
             <div>
-              <h4 class="text-sm font-semibold text-slate-900 mb-1">
+              <h4
+                class="font-space text-lg font-semibold text-slate-900 mb-1.5"
+              >
                 Subharti University
               </h4>
-              <p class="text-xs text-slate-500 leading-relaxed">
+              <p class="text-sm text-slate-500 leading-relaxed mb-3">
                 Recognized programs focused on professional advancement across
                 management, science, and arts.
               </p>
               <div
-                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full mt-2.5"
+                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full"
               >
                 <i class="ti ti-shield-check"></i> UGC-DEB Approved
               </div>
             </div>
           </div>
 
+          <!-- SGVU -->
           <div
-            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col sm:flex-row gap-4 items-start hover:-translate-y-1 hover:shadow-lg transition-all duration-250"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
             <div
-              class="w-11 h-11 rounded-xl flex items-center justify-center text-[13px] font-bold shrink-0 bg-fuchsia-50 text-purple-800"
+              class="w-14 h-14 rounded-2xl flex items-center justify-center text-base font-bold shrink-0 bg-fuchsia-50 text-purple-800"
             >
               SG
             </div>
             <div>
-              <h4 class="text-sm font-semibold text-slate-900 mb-1">SGVU</h4>
-              <p class="text-xs text-slate-500 leading-relaxed">
+              <h4
+                class="font-space text-lg font-semibold text-slate-900 mb-1.5"
+              >
+                SGVU
+              </h4>
+              <p class="text-sm text-slate-500 leading-relaxed mb-3">
                 Suresh Gyan Vihar University — quality online programs with
                 strong academic support and industry linkages.
               </p>
               <div
-                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full mt-2.5"
+                class="inline-flex items-center gap-1 bg-green-100 text-green-800 text-[10px] font-semibold px-2.5 py-1 rounded-full"
               >
                 <i class="ti ti-shield-check"></i> UGC-DEB Approved
               </div>
@@ -781,28 +1135,42 @@
       </div>
     </section>
 
-    <section class="py-16 px-4 max-w-4xl mx-auto">
+    <section id="faq" class="py-20 px-4 max-w-3xl mx-auto">
       <div
         class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2 text-center"
       >
         FAQ
       </div>
       <h2
-        class="font-space text-3xl font-bold text-slate-900 mb-10 tracking-tight text-center"
+        class="font-space text-3xl font-bold text-slate-900 mb-6 tracking-tight text-center"
       >
         Common questions answered
       </h2>
 
-      <div class="flex flex-col gap-3">
+      <div class="relative mb-8">
+        <i
+          class="ti ti-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-base"
+        ></i>
+        <input
+          id="faq-search"
+          type="text"
+          placeholder="Search a question…"
+          oninput="filterFaqs(this.value)"
+          class="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-gray-200 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent shadow-sm"
+        />
+      </div>
+
+      <div class="flex flex-col gap-3" id="faq-list">
         <div
-          class="bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
+          class="faq-item bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
           onclick="toggleFaq(this)"
+          data-q="is an online degree valid for government jobs in india yes degrees from ugc-deb approved universities are fully recognized by the government of india and accepted for government jobs private sector employment and higher studies like mba or civil services"
         >
           <div
-            class="flex justify-between items-center text-sm font-semibold text-slate-900"
+            class="flex justify-between items-center gap-3 text-sm font-semibold text-slate-900"
           >
             Is an online degree valid for government jobs in India?
-            <i class="ti ti-chevron-down text-slate-400"></i>
+            <i class="ti ti-chevron-down text-slate-400 shrink-0"></i>
           </div>
           <div class="text-[13px] text-slate-500 leading-relaxed mt-2.5 hidden">
             Yes. Degrees from UGC-DEB approved universities are fully recognized
@@ -812,14 +1180,15 @@
         </div>
 
         <div
-          class="bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
+          class="faq-item bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
           onclick="toggleFaq(this)"
+          data-q="can i study while working a full-time job absolutely online programs are specifically designed for working professionals you can study at any time morning evening or weekends completely at your own pace with recorded lectures available 24/7"
         >
           <div
-            class="flex justify-between items-center text-sm font-semibold text-slate-900"
+            class="flex justify-between items-center gap-3 text-sm font-semibold text-slate-900"
           >
             Can I study while working a full-time job?
-            <i class="ti ti-chevron-down text-slate-400"></i>
+            <i class="ti ti-chevron-down text-slate-400 shrink-0"></i>
           </div>
           <div class="text-[13px] text-slate-500 leading-relaxed mt-2.5 hidden">
             Absolutely. Online programs are specifically designed for working
@@ -830,14 +1199,15 @@
         </div>
 
         <div
-          class="bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
+          class="faq-item bg-white border border-gray-200 hover:border-indigo-200 rounded-2xl p-4 sm:p-5 cursor-pointer transition-colors duration-200"
           onclick="toggleFaq(this)"
+          data-q="is counseling at edyoucate really free yes completely free with no obligation our counselors guide you to the best program honestly we earn only when you successfully enroll so our advice is always in your best interest"
         >
           <div
-            class="flex justify-between items-center text-sm font-semibold text-slate-900"
+            class="flex justify-between items-center gap-3 text-sm font-semibold text-slate-900"
           >
             Is counseling at edYOUcate really free?
-            <i class="ti ti-chevron-down text-slate-400"></i>
+            <i class="ti ti-chevron-down text-slate-400 shrink-0"></i>
           </div>
           <div class="text-[13px] text-slate-500 leading-relaxed mt-2.5 hidden">
             Yes, completely free with no obligation. Our counselors guide you to
@@ -845,10 +1215,20 @@
             enroll, so our advice is always in your best interest.
           </div>
         </div>
+
+        <p
+          id="faq-empty"
+          class="hidden text-center text-sm text-slate-400 py-6"
+        >
+          No questions match your search. Try a different keyword, or
+          <a href="#contact" class="text-indigo-500 font-semibold"
+            >ask us directly →</a
+          >
+        </p>
       </div>
     </section>
 
-    <div class="max-w-5xl mx-auto px-4 mb-8">
+    <div id="contact" class="max-w-5xl mx-auto px-4 mb-8">
       <div
         class="relative overflow-hidden bg-[#0b1226] rounded-3xl py-12 px-6 sm:px-12 text-center shadow-xl"
       >
@@ -916,14 +1296,46 @@
     </footer>
 
     <script>
+      document.getElementById("nav-toggle")?.addEventListener("click", () => {
+        document.getElementById("mobile-menu")?.classList.toggle("hidden");
+      });
+    </script>
+
+    <script>
       // Tab switching logic modified to update Tailwind classes
       function switchTab(el, type) {
-        document.querySelectorAll(".tab").forEach((t) => {
-          t.className =
-            "tab px-5 py-2 rounded-full text-[13px] cursor-pointer border border-gray-200 text-slate-500 bg-white hover:bg-gray-50 transition-all duration-200";
+        document.querySelectorAll(".audience-panel").forEach((p) => {
+          const isActive = p.dataset.panel === type;
+          if (isActive) {
+            p.className =
+              "audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-gradient-to-br from-indigo-500 to-purple-500 text-white";
+          } else {
+            p.className =
+              "audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-white text-slate-900 border-l border-gray-200";
+          }
+          const tagEl = p.querySelector(".mt-6");
+          if (isActive) {
+            tagEl.className =
+              "mt-6 inline-flex items-center gap-1.5 text-xs font-semibold bg-white/15 px-3.5 py-1.5 rounded-full backdrop-blur-md";
+            tagEl.innerHTML =
+              'Viewing this path <i class="ti ti-arrow-right"></i>';
+            const icon = p.querySelector(".w-12");
+            icon.className =
+              "w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl backdrop-blur-md";
+            const para = p.querySelector("p");
+            para.className = "text-sm text-white/80 leading-relaxed max-w-sm";
+          } else {
+            tagEl.className =
+              "mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-500 group-hover:gap-2.5 transition-all";
+            tagEl.innerHTML =
+              'Tap to view this path <i class="ti ti-arrow-right"></i>';
+            const icon = p.querySelector(".w-12");
+            icon.className =
+              "w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 flex items-center justify-center mb-6 text-xl text-indigo-500";
+            const para = p.querySelector("p");
+            para.className = "text-sm text-slate-500 leading-relaxed max-w-sm";
+          }
         });
-        el.className =
-          "tab px-5 py-2 rounded-full text-[13px] cursor-pointer border transition-all duration-200 active bg-gradient-to-br from-indigo-500 to-purple-500 text-white border-transparent shadow-[0_6px_16px_-6px_rgba(99,102,241,0.55)]";
 
         const pc = document.getElementById("pain-content");
         const cardClass =
@@ -952,6 +1364,20 @@
       function toggleFaq(el) {
         const a = el.querySelector("div:nth-child(2)");
         a.classList.toggle("hidden");
+      }
+
+      function filterFaqs(query) {
+        const q = query.trim().toLowerCase();
+        const items = document.querySelectorAll("#faq-list .faq-item");
+        let visibleCount = 0;
+        items.forEach((item) => {
+          const match = item.dataset.q.includes(q);
+          item.classList.toggle("hidden", !match);
+          if (match) visibleCount++;
+        });
+        document
+          .getElementById("faq-empty")
+          ?.classList.toggle("hidden", visibleCount > 0);
       }
     </script>
   </body>

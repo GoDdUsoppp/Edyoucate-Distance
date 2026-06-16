@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -38,12 +38,18 @@
             },
             animation: {
               "glow-spin": "glowSpin 10s linear infinite",
+              "float-slow": "float-slow 8s ease-in-out infinite",
+              "float-delayed": "float-slow 10s ease-in-out infinite 2s",
             },
             keyframes: {
               glowSpin: {
                 "0%": { backgroundPosition: "0% 50%" },
                 "50%": { backgroundPosition: "100% 50%" },
                 "100%": { backgroundPosition: "0% 50%" },
+              },
+              "float-slow": {
+                "0%, 100%": { transform: "translateY(0) scale(1)" },
+                "50%": { transform: "translateY(-20px) scale(1.05)" },
               }
             },
           },
@@ -53,53 +59,40 @@
 
     <style type="text/tailwindcss">
       @layer utilities {
+        /* Gradient text for the navbar: Dark Navy to Dark Red */
+        .menu-gradient-span {
+          background: linear-gradient(90deg, #171731 20%, #990000 80%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        
+        /* Hover State for Gradient Menu Items */
+        .menu-gradient-span a {
+          transition: all 0.2s ease-in-out;
+          display: inline-block;
+        }
+        .menu-gradient-span a:hover {
+          -webkit-text-fill-color: #990000;
+          transform: translateY(-1px);
+        }
+        
+        /* Premium Dot Texture Background */
+        .bg-dots-texture {
+          background-image: radial-gradient(rgba(229, 0, 0, 0.15) 1px, transparent 1px);
+          background-size: 24px 24px;
+        }
+
+        /* Abstract masks */
         .bg-dots-mask {
           background-image:
             linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-            linear-gradient(
-              90deg,
-              rgba(255, 255, 255, 0.035) 1px,
-              transparent 1px
-            );
+            linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
           background-size: 42px 42px;
-          mask-image: radial-gradient(
-            ellipse 70% 70% at 50% 30%,
-            black,
-            transparent
-          );
+          mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black, transparent);
         }
-        .glow-border::before {
-          content: "";
-          position: absolute;
-          inset: -2px;
-          border-radius: 26px;
-          z-index: -1;
-          /* Replaced neon gradient with brand colors */
-          background: linear-gradient(
-            135deg,
-            #171731 0%,
-            #232347 50%,
-            #E50000 100%
-          );
-          background-size: 300% 300%;
-          filter: blur(22px);
-          opacity: 0.45;
-        }
-        /* Utility for step connecting lines */
-        .step-line::before {
-          content: "";
-          position: absolute;
-          top: 28px;
-          left: 10%;
-          right: 10%;
-          height: 1px;
-          background: #e5e7eb;
-          z-index: -1;
-        }
-      }
-    </style>
-    <style type="text/tailwindcss">
-      @layer utilities {
+        
+        /* Odometer utilities for stats */
         .odo-wrap {
           @apply inline-flex overflow-hidden h-[1.1em] leading-[1.1em] align-bottom;
         }
@@ -112,316 +105,216 @@
       }
     </style>
   </head>
-  <body
-    class="text-brand-text antialiased selection:bg-brand-red/20 selection:text-brand-red"
-  >
-    <!-- Fixed Navigation -->
-    <nav
-      id="main-nav"
-      class="fixed w-full top-0 z-50 transition-transform duration-300 bg-brand-light border-b border-gray-200"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4"
-      >
-        <!-- Logo (Left) -->
+  <body class="text-brand-text antialiased selection:bg-brand-red/20 selection:text-brand-red bg-brand-light">
+
+    <!-- ==========================================
+         WHITE NAVBAR
+         ========================================== -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm px-4 sm:px-6 h-20 flex items-center transition-transform duration-300" id="main-nav">
+      <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+        <!-- Logo -->
         <a href="#" class="shrink-0">
-          <img
-            src="logo.png"
-            alt="edYOUcate"
-            class="h-20 sm:h-18 w-auto object-contain"
-          />
+          <img src="logo.png" alt="edYOUcate" class="h-20 sm:h-18 w-auto object-contain" />
         </a>
 
-        <!-- Desktop Navigation (Center) -->
-        <div
-          class="hidden lg:flex flex-1 justify-center items-center gap-6 text-[15px] font-semibold text-brand-dark"
-        >
-          <a href="#" class="hover:text-brand-red active:text-brand-red transition-colors">Home</a>
-          <a href="#programs" class="hover:text-brand-red active:text-brand-red transition-colors"
-            >Programs</a
-          >
-          <a
-            href="#universities"
-            class="hover:text-brand-red active:text-brand-red transition-colors"
-            >Universities</a
-          >
-          <a href="#process" class="hover:text-brand-red active:text-brand-red transition-colors"
-            >Process</a
-          >
-          <a href="#stories" class="hover:text-brand-red active:text-brand-red transition-colors"
-            >Success Stories</a
-          >
-          <a href="#faq" class="hover:text-brand-red active:text-brand-red transition-colors">FAQ</a>
-          <a href="#contact" class="hover:text-brand-red active:text-brand-red transition-colors"
-            >Contact</a
-          >
+        <!-- Continuous Gradient Menu -->
+        <div class="hidden lg:flex menu-gradient-span font-bold text-[16px] gap-8">
+          <a href="#">Home</a>
+          <a href="#programs">Programs</a>
+          <a href="#universities">Universities</a>
+          <a href="#process">Process</a>
+          <a href="#stories">Success Stories</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </div>
 
-        <!-- Desktop CTA (Right) -->
+        <!-- Desktop CTA -->
         <div class="hidden lg:block shrink-0">
-          <button
-            class="bg-brand-red text-white text-sm px-6 py-2.5 rounded-xl font-semibold shadow-[0_4px_14px_0_rgba(229,0,0,0.25)] hover:bg-brand-redHover hover:-translate-y-0.5 hover:scale-[1.02] transition-all duration-250"
-          >
+          <button class="bg-[#E50000] text-white text-sm px-6 py-2.5 rounded-xl font-semibold shadow-md hover:bg-[#C70000] transition-colors">
             Book Free Counseling ↗
           </button>
         </div>
 
-        <!-- Mobile Hamburger Menu Button -->
-        <button
-          id="nav-toggle"
-          class="lg:hidden w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-dark shadow-sm border border-gray-200 focus:outline-none"
-          aria-label="Toggle menu"
-        >
+        <!-- Mobile Hamburger -->
+        <button id="nav-toggle" class="lg:hidden w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center text-[#171731] shadow-sm border border-gray-200 focus:outline-none">
           <i class="ti ti-menu text-xl"></i>
         </button>
       </div>
 
       <!-- Mobile Menu Dropdown -->
-      <div
-        id="mobile-menu"
-        class="lg:hidden overflow-hidden bg-brand-light border-t border-gray-200"
-        style="
-          max-height: 0;
-          opacity: 0;
-          pointer-events: none;
-          transition: all 0.3s ease;
-        "
-      >
+      <div id="mobile-menu" class="absolute top-20 left-0 w-full lg:hidden overflow-hidden bg-white border-t border-gray-200 shadow-xl" style="max-height: 0; opacity: 0; pointer-events: none; transition: all 0.3s ease;">
         <div class="px-6 py-6">
-          <div
-            class="flex flex-col items-start gap-6 mb-6 text-[15px] font-semibold text-brand-dark"
-          >
-            <a href="#" class="hover:text-brand-red">Home</a>
-            <a href="#programs" class="hover:text-brand-red">Programs</a>
-            <a href="#universities" class="hover:text-brand-red">Universities</a>
-            <a href="#process" class="hover:text-brand-red">Process</a>
-            <a href="#stories" class="hover:text-brand-red">Success Stories</a>
-            <a href="#faq" class="hover:text-brand-red">FAQ</a>
-            <a href="#contact" class="hover:text-brand-red">Contact</a>
+          <div class="flex flex-col items-start gap-6 mb-6 text-[15px] font-bold text-[#171731]">
+            <a href="#" class="hover:text-[#E50000]">Home</a>
+            <a href="#programs" class="hover:text-[#E50000]">Programs</a>
+            <a href="#universities" class="hover:text-[#E50000]">Universities</a>
+            <a href="#process" class="hover:text-[#E50000]">Process</a>
+            <a href="#stories" class="hover:text-[#E50000]">Success Stories</a>
+            <a href="#faq" class="hover:text-[#E50000]">FAQ</a>
+            <a href="#contact" class="hover:text-[#E50000]">Contact</a>
           </div>
-
-          <button
-            class="w-full bg-brand-red text-white py-3.5 rounded-xl font-semibold shadow-lg hover:bg-brand-redHover transition-colors"
-          >
+          <button class="w-full bg-[#E50000] text-white py-3.5 rounded-xl font-semibold shadow-lg hover:bg-[#C70000] transition-colors">
             Book Free Counseling ↗
           </button>
         </div>
       </div>
     </nav>
+
+    <!-- Mobile Nav Script & Smart Scroll Logic -->
     <script>
       const navToggle = document.getElementById("nav-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
       const navbar = document.getElementById("main-nav");
       const icon = navToggle?.querySelector("i");
-
-      let lastScrollTop = 0;
+      
       let isMenuOpen = false;
+      let lastScrollTop = 0;
 
       // Mobile Menu Toggle
       function toggleMenu() {
         isMenuOpen = !isMenuOpen;
-
         if (isMenuOpen) {
           mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
           mobileMenu.style.opacity = "1";
           mobileMenu.style.pointerEvents = "auto";
-
           icon.className = "ti ti-x text-xl";
         } else {
           mobileMenu.style.maxHeight = "0";
           mobileMenu.style.opacity = "0";
           mobileMenu.style.pointerEvents = "none";
-
           icon.className = "ti ti-menu text-xl";
         }
       }
+      
       navToggle?.addEventListener("click", toggleMenu);
-
-      // Close menu when clicking a menu item
+      
       mobileMenu?.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
-          if (isMenuOpen) {
-            toggleMenu();
-          }
+          if (isMenuOpen) toggleMenu();
         });
       });
 
-      // Smart Navbar Scroll
+      // Retractable Navbar (Smart Scroll)
       window.addEventListener("scroll", () => {
-        if (isMenuOpen) return;
+        if (isMenuOpen) return; // Keep navbar fixed if the mobile menu is currently open
 
-        let scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+        // Trigger only after scrolling past the initial 80px
         if (scrollTop > 80) {
           if (scrollTop > lastScrollTop) {
+            // Scrolling down: Hide the navbar
             navbar.style.transform = "translateY(-100%)";
           } else {
+            // Scrolling up: Reveal the navbar
             navbar.style.transform = "translateY(0)";
           }
         } else {
+          // At the very top: Ensure it is visible
           navbar.style.transform = "translateY(0)";
         }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
       });
     </script>
-    
-    <!-- ===== Hero Section ===== -->
-    <div
-      class="relative overflow-hidden bg-brand-dark mt-20 pt-16 pb-24 px-4 sm:px-6"
-    >
-      <!-- Deep navy background with subtle red glow -->
-      <div
-        class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_15%_20%,rgba(229,0,0,0.1),transparent_60%)] pointer-events-none"
-      ></div>
-      <div class="absolute inset-0 bg-dots-mask pointer-events-none"></div>
 
-      <div
-        class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center text-center lg:text-left"
-      >
-        <div>
-          <div
-            class="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 text-white text-xs px-3.5 py-1.5 rounded-full mb-6 backdrop-blur-md"
-          >
-            <i class="ti ti-shield-check text-brand-red"></i> UGC-DEB Approved Universities
+    <div class="pt-20"></div>
+
+    <div class="flex flex-col min-h-[calc(100vh-5rem)] w-full">
+
+      <div class="relative overflow-hidden bg-gradient-to-b from-[#FFD1D1] to-[#FFB8B8] flex-1 flex items-center z-0 px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        
+        <div class="absolute inset-0 bg-dots-texture opacity-60 pointer-events-none"></div>
+
+        <div class="absolute top-0 left-0 w-[30rem] h-[30rem] bg-white/60 rounded-full blur-[100px] -translate-x-1/3 -translate-y-1/3 pointer-events-none animate-float-slow"></div>
+        <div class="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-[#E50000]/20 rounded-full blur-[120px] translate-x-1/4 translate-y-1/4 pointer-events-none animate-float-delayed"></div>
+        <div class="absolute top-1/2 right-1/4 w-[25rem] h-[25rem] bg-white/40 rounded-full blur-[80px] -translate-y-1/2 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center w-full relative z-10">
+          
+          <div>
+            <div class="inline-flex items-center gap-1.5 bg-[#E50000]/10 text-[#E50000] text-sm px-4 py-2 rounded-full mb-5 font-bold backdrop-blur-sm border border-[#E50000]/10">
+              <i class="ti ti-shield-check text-lg"></i> UGC-DEB Approved Universities
+            </div>
+            
+            <h1 class="font-space text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#171731] leading-[1.2] tracking-tight mb-5">
+              Get a Recognized Degree <br class="hidden sm:block" />
+              <span class="text-[#E50000] whitespace-nowrap">Without Leaving Your Job.</span>
+            </h1>
+            
+            <p class="text-[#171731]/80 text-base sm:text-lg leading-relaxed max-w-lg mb-8 font-medium">
+              Elevate your career with the perfect blend of flexibility and academic excellence. Online distance education from India's top universities.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="bg-[linear-gradient(90deg,#171731_20%,#990000_80%)] text-white px-8 py-3.5 rounded-full font-semibold text-[15px] shadow-[0_15px_30px_-5px_rgba(153,0,0,0.4)] hover:scale-105 transition-transform duration-300">
+                Book Free Counseling
+              </button>
+              <button class="bg-white/50 backdrop-blur-md border-2 border-[#171731] text-[#171731] hover:bg-[#171731] hover:text-white px-8 py-3.5 rounded-full font-semibold text-[15px] transition-all">
+                Explore Programs
+              </button>
+            </div>
           </div>
-          <h1
-            class="font-space text-4xl sm:text-5xl lg:text-[2.6rem] font-bold text-white leading-[1.18] tracking-tight mb-4"
-          >
-            Get a Recognized Degree<br />
-            <span class="text-brand-red">Without Leaving Your Job</span>
-          </h1>
-          <p
-            class="text-white/70 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8"
-          >
-            edYOUcate helps students and working professionals in Surat pursue
-            online & distance education from India's top universities —
-            flexible, affordable, and fully guided.
-          </p>
 
-          <div
-            class="flex flex-col sm:flex-row gap-3.5 justify-center lg:justify-start mb-10"
-          >
-            <button
-              class="relative bg-brand-red text-white px-7 py-3.5 rounded-xl font-semibold shadow-[0_8px_24px_-8px_rgba(229,0,0,0.5)] hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-brand-redHover hover:shadow-[0_12px_32px_-8px_rgba(229,0,0,0.7)] transition-all duration-250"
-            >
-              Book Free Counseling ↗
-            </button>
-            <button
-              class="border border-brand-dark bg-brand-dark text-white hover:bg-white hover:text-brand-dark px-7 py-3.5 rounded-xl font-medium transition-all duration-250"
-            >
-              Explore Programs
-            </button>
-          </div>
-        </div>
-
-        <div class="relative flex justify-center items-center mt-8 lg:mt-0">
-          <div
-            class="relative w-full max-w-3xl aspect-video rounded-[24px] p-2 bg-white/5 border border-white/10 backdrop-blur-md shadow-[0_25px_60px_-15px_rgba(0,0,0,0.55)] hover:-translate-y-1.5 transition-transform duration-400 glow-border animate-glow-spin"
-          >
+          <div class="relative w-full aspect-video rounded-[24px] p-2 bg-white/40 border border-white/60 backdrop-blur-md shadow-2xl group">
             <iframe
               src="https://www.youtube.com/embed/qHtVy91UBsI?autoplay=1&mute=1&loop=1&playlist=qHtVy91UBsI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-              title="YouTube video player"
-              class="w-full h-full rounded-[16px] border-none block"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            >
+              class="w-full h-full rounded-[16px] border-none"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen>
             </iframe>
           </div>
+          
         </div>
       </div>
-    </div>
-    
-    <div
-      class="bg-brand-dark border-t border-white/10 py-10 px-4 relative z-10"
-      id="stats-section"
-    >
-      <div
-        class="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-14"
-      >
-        <div class="text-center min-w-[130px]">
-          <div
-            class="font-space text-3xl font-bold text-brand-red flex items-center justify-center"
-          >
-            <span class="stat-counter" data-target="5000">0</span>+
-          </div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            Students guided
-          </div>
-        </div>
 
-        <div class="text-center min-w-[130px]">
-          <div
-            class="font-space text-3xl font-bold text-brand-red flex items-center justify-center"
-          >
-            <span class="stat-counter" data-target="25">0</span>+
-          </div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            Partner universities
-          </div>
-        </div>
+      <div class="bg-[#FFB8B8] pb-10 px-4 relative z-10 w-full flex-shrink-0 shadow-inner" id="stats-section">
+        
+        <div class="w-full mb-10" style="height: 0.5px; background-color: rgba(229,0,0,0.35);"></div>
 
-        <div class="text-center min-w-[130px]">
-          <div
-            class="font-space text-3xl font-bold text-brand-red flex items-center justify-center"
-          >
-            <span class="stat-counter" data-target="100">0</span>%
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-14">
+          
+          <div class="text-center min-w-[130px]">
+            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+              <span class="stat-counter" data-target="5000">0</span>+
+            </div>
+            <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Students guided</div>
           </div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            UGC-DEB approved
-          </div>
-        </div>
 
-        <div class="text-center min-w-[130px]">
-          <div
-            class="font-space text-3xl font-bold text-brand-red flex items-center justify-center"
-          >
-            <span class="stat-counter" data-target="4.9">0</span>/5
+          <div class="text-center min-w-[130px]">
+            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+              <span class="stat-counter" data-target="25">0</span>+
+            </div>
+            <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Partner universities</div>
           </div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            Google Rating
-          </div>
-        </div>
 
-        <div class="text-center min-w-[130px]">
-          <div class="font-space text-3xl font-bold text-brand-red">Free</div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            Counseling session
+          <div class="text-center min-w-[130px]">
+            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+              <span class="stat-counter" data-target="100">0</span>%
+            </div>
+            <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">UGC-DEB approved</div>
           </div>
-        </div>
 
-        <div class="text-center min-w-[130px]">
-          <div class="font-space text-3xl font-bold text-brand-red">Surat</div>
-          <div
-            class="text-xs text-white/60 mt-1.5 uppercase tracking-wider font-medium"
-          >
-            Based & trusted
+          <div class="text-center min-w-[130px]">
+            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+              <span class="stat-counter" data-target="4.9">0</span>/5
+            </div>
+            <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Google Rating</div>
           </div>
+
+          
+
+          <div class="text-center min-w-[130px]">
+            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+              Surat
+            </div>
+            <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Based & trusted</div>
+          </div>
+
         </div>
       </div>
-    </div>
-
-    <script>
+      
+    </div> <script>
       document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll(".stat-counter");
 
@@ -443,22 +336,17 @@
               col.dataset.offset = 0;
             } else {
               col.style.transitionDuration = `${2 + index * 0.4}s`;
-
               let stripHTML = "";
               const spins = 2;
               for (let i = 0; i < spins; i++) {
-                for (let j = 0; j <= 9; j++)
-                  stripHTML += `<div class="odo-digit">${j}</div>`;
+                for (let j = 0; j <= 9; j++) stripHTML += `<div class="odo-digit">${j}</div>`;
               }
-
               for (let j = 0; j <= finalDigit; j++) {
                 stripHTML += `<div class="odo-digit">${j}</div>`;
               }
-
               col.innerHTML = stripHTML;
               col.dataset.offset = spins * 10 + finalDigit;
             }
-
             counter.appendChild(col);
           });
         });
@@ -486,116 +374,6 @@
       });
     </script>
 
-<!-- ===================== ABOUT / STORY SECTION ===================== -->
-    <section class="relative bg-white py-20 px-4 overflow-hidden">
-      <div
-        class="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full blur-3xl opacity-60 pointer-events-none"
-      ></div>
-
-      <div class="relative max-w-6xl mx-auto">
-        <div
-          class="text-[11px] text-indigo-500 font-semibold uppercase tracking-widest mb-2"
-        >
-          About edYOUcate
-        </div>
-        <h2
-          class="font-space text-3xl sm:text-4xl font-bold text-slate-900 mb-3 tracking-tight max-w-2xl"
-        >
-          Surat's most trusted online education consultancy
-        </h2>
-        <p class="text-sm text-slate-500 mb-10 max-w-2xl">
-          Who we are, what we believe in, and why 500+ students trust us
-        </p>
-
-        <!-- Bento Box Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
-          
-          <!-- Box 1: The Belief (Spans 2 columns on desktop) -->
-          <div
-            class="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-7 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center"
-          >
-            <div
-              class="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-50 to-violet-50 flex items-center justify-center mb-4 text-indigo-500 text-lg border border-indigo-50"
-            >
-              <i class="ti ti-bulb"></i>
-            </div>
-            <p class="text-[17px] text-slate-600 leading-relaxed">
-              <span class="font-space font-bold text-slate-900">edYOUcate</span>
-              is a Surat-based education consultancy founded with one simple
-              belief — that every student and working professional deserves
-              access to quality higher education,
-              <strong class="text-slate-800 font-semibold"
-                >no matter their schedule, budget, or background.</strong
-              >
-            </p>
-          </div>
-
-          <!-- Box 2: The Mission (Pushed to bottom on mobile, spans 2 rows on desktop) -->
-          <div
-            class="order-last md:order-none lg:col-span-1 lg:row-span-2 relative rounded-3xl p-7 sm:p-8 bg-[#0b1226] overflow-hidden flex flex-col justify-center shadow-lg hover:-translate-y-1 transition-transform duration-300 min-h-[300px]"
-          >
-            <div
-              class="absolute inset-0 bg-aurora-gradient animate-aurora pointer-events-none opacity-80"
-            ></div>
-
-            <div
-              class="absolute -top-4 -right-2 font-space text-[120px] leading-none text-white/5 font-bold pointer-events-none select-none"
-            >
-              "
-            </div>
-
-            <div class="relative z-10">
-              <div
-                class="inline-flex items-center gap-1.5 bg-white/10 border border-white/10 text-indigo-100 text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 backdrop-blur-md"
-              >
-                <i class="ti ti-target text-sky-300"></i> Our Mission
-              </div>
-              <p
-                class="font-space text-[19px] sm:text-xl text-white leading-snug italic font-medium"
-              >
-                "To empower every student and working professional in Surat with
-                flexible, affordable, and career-focused higher education — so
-                no one has to choose between their job, family, and academic
-                future."
-              </p>
-            </div>
-          </div>
-
-          <!-- Box 3: The Problem -->
-          <div
-            class="bg-white border border-gray-200 rounded-3xl p-7 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center"
-          >
-            <p class="text-[15px] text-slate-600 leading-relaxed">
-              We saw too many talented people in Gujarat give up on their
-              education dreams because traditional colleges didn't fit their
-              lives. Full-time attendance, high fees, rigid schedules — these
-              were barriers that
-              <strong class="text-slate-800 font-semibold"
-                >shouldn't exist in today's world.</strong
-              >
-            </p>
-          </div>
-
-          <!-- Box 4: The Solution -->
-          <div
-            class="bg-white border border-gray-200 rounded-3xl p-7 sm:p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center"
-          >
-            <p class="text-[15px] text-slate-600 leading-relaxed">
-              So we built
-              <span class="font-space font-bold text-slate-900">edYOUcate</span>
-              — a consultancy that puts students first. We don't just help you
-              enroll; we understand your life situation, recommend the right
-              program honestly, handle all the paperwork, and support you long
-              after admission day.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- =================== END ABOUT / STORY SECTION =================== -->
-
-    <!-- ===================== ABOUT / STORY SECTION ===================== -->
     <section class="relative bg-white py-20 px-4 overflow-hidden">
       <div
         class="absolute -top-24 -right-24 w-96 h-96 bg-[rgba(229,0,0,0.05)] rounded-full blur-3xl pointer-events-none"
@@ -688,8 +466,6 @@
         </div>
       </div>
     </section>
-    <!-- =================== END ABOUT / STORY SECTION =================== -->
-
     <section id="who-we-help" class="bg-brand-light py-20 px-4">
       <div class="max-w-6xl mx-auto">
         <div
@@ -712,13 +488,13 @@
         >
           <button
             onclick="switchTab(this, 'student')"
-            class="audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-[linear-gradient(135deg,#171731_0%,#232347_60%,#E50000_100%)] text-white"
+            class="audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-[linear-gradient(135deg,#171731_0%,#232347_40%,#E50000_100%)] text-white"
             data-panel="student"
           >
             <div
-              class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl backdrop-blur-md"
+              class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl  backdrop-blur-md"
             >
-              <i class="ti ti-school text-white"></i>
+              <i class="ti ti-school"></i>
             </div>
             <h3 class="font-space text-2xl font-bold mb-2">Students</h3>
             <p class="text-sm text-white/80 leading-relaxed max-w-sm">
@@ -849,7 +625,6 @@
         </p>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-5">
-          <!-- PG: featured, spans full height on the left -->
           <div
             class="relative lg:row-span-2 bg-[linear-gradient(135deg,#171731_0%,#232347_60%,#E50000_100%)] text-white rounded-3xl p-7 sm:p-8 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 flex flex-col"
           >
@@ -899,7 +674,6 @@
             </div>
           </div>
 
-          <!-- UG -->
           <div
             class="bg-white rounded-3xl p-7 border border-gray-200 border-t-4 border-t-brand-red hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
           >
@@ -940,7 +714,6 @@
             </div>
           </div>
 
-          <!-- Diploma -->
           <div
             class="bg-white rounded-3xl p-7 border border-gray-200 border-t-4 border-t-brand-red hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
           >
@@ -973,7 +746,6 @@
             </div>
           </div>
 
-          <!-- Comparison strip spanning bottom-right -->
           <div
             class="lg:col-span-2 bg-white rounded-3xl p-7 border border-gray-200 border-t-4 border-t-brand-red hover:shadow-xl transition-all duration-300"
           >
@@ -1180,7 +952,6 @@
         </p>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
-          <!-- Trust banner spanning full width -->
           <div
             class="lg:col-span-4 bg-brand-dark rounded-3xl p-7 sm:p-8 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6"
           >
@@ -1207,7 +978,6 @@
             </div>
           </div>
 
-          <!-- JAIN Online: featured, spans 2 cols -->
           <div
             class="lg:col-span-2 bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
@@ -1234,7 +1004,6 @@
             </div>
           </div>
 
-          <!-- Mangalayatan -->
           <div
             class="lg:col-span-2 bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
@@ -1261,7 +1030,6 @@
             </div>
           </div>
 
-          <!-- Subharti -->
           <div
             class="lg:col-span-2 bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
@@ -1288,7 +1056,6 @@
             </div>
           </div>
 
-          <!-- SGVU -->
           <div
             class="lg:col-span-2 bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-3xl p-7 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5 items-start"
           >
@@ -1493,7 +1260,7 @@
           const isActive = p.dataset.panel === type;
           if (isActive) {
             p.className =
-              "audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-[linear-gradient(135deg,#171731_0%,#232347_60%,#E50000_100%)] text-white";
+              "audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-[linear-gradient(135deg,#171731_0%,#232347_40%,#E50000_100%)] text-white";
           } else {
             p.className =
               "audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-white text-brand-text border-l border-gray-200";
@@ -1502,31 +1269,25 @@
           if (isActive) {
             tagEl.className =
               "mt-6 inline-flex items-center gap-1.5 text-xs font-semibold bg-white/15 px-3.5 py-1.5 rounded-full backdrop-blur-md";
-            tagEl.innerHTML =
-              'Viewing this path <i class="ti ti-arrow-right"></i>';
+            tagEl.innerHTML = 'Viewing this path <i class="ti ti-arrow-right"></i>';
             const icon = p.querySelector(".w-12");
-            icon.className =
-              "w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl backdrop-blur-md text-white";
+            icon.className = "w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl  backdrop-blur-md text-white";
             const para = p.querySelector("p");
             para.className = "text-sm text-white/80 leading-relaxed max-w-sm";
           } else {
             tagEl.className =
               "mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-red group-hover:gap-2.5 transition-all";
-            tagEl.innerHTML =
-              'Tap to view this path <i class="ti ti-arrow-right"></i>';
+            tagEl.innerHTML = 'Tap to view this path <i class="ti ti-arrow-right"></i>';
             const icon = p.querySelector(".w-12");
-            icon.className =
-              "w-12 h-12 rounded-2xl bg-[rgba(229,0,0,0.08)] flex items-center justify-center mb-6 text-xl text-brand-red";
+            icon.className = "w-12 h-12 rounded-2xl bg-[rgba(229,0,0,0.08)] flex items-center justify-center mb-6 text-xl text-brand-red";
             const para = p.querySelector("p");
             para.className = "text-sm text-brand-muted leading-relaxed max-w-sm";
           }
         });
 
         const pc = document.getElementById("pain-content");
-        const cardClass =
-          "bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-2xl p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-250";
-        const iconClass =
-          "w-10 h-10 rounded-xl bg-[rgba(229,0,0,0.08)] flex items-center justify-center mb-4 text-brand-red text-lg";
+        const cardClass = "bg-white border border-gray-200 border-t-4 border-t-brand-red rounded-2xl p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-250";
+        const iconClass = "w-10 h-10 rounded-xl bg-[rgba(229,0,0,0.08)] flex items-center justify-center mb-4 text-brand-red text-lg";
         const titleClass = "text-sm font-semibold text-brand-text mb-1.5";
         const textClass = "text-xs text-brand-muted leading-relaxed";
 
@@ -1559,9 +1320,7 @@
           item.classList.toggle("hidden", !match);
           if (match) visibleCount++;
         });
-        document
-          .getElementById("faq-empty")
-          ?.classList.toggle("hidden", visibleCount > 0);
+        document.getElementById("faq-empty")?.classList.toggle("hidden", visibleCount > 0);
       }
     </script>
   </body>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>edYOUcate</title>
-
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,7 +34,7 @@
             },
             fontFamily: {
               sans: ["Inter", "sans-serif"],
-              space: ["Space Grotesk", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
             },
             animation: {
               "glow-spin": "glowSpin 10s linear infinite",
@@ -204,44 +204,48 @@
     </script>
 
     <div class="pt-20"></div>
-
-    <!-- ==========================================
-         HERO SECTION (Warm Parchment Beige #EAE0CF)
+<!-- ==========================================
+         HERO SECTION (Interactive Constellation - Particles.js)
          ========================================== -->
     <div class="flex flex-col min-h-[calc(100vh-5rem)] w-full">
-      <div class="relative overflow-hidden bg-[#EAE0CF] flex-1 flex items-center z-0 px-4 sm:px-6 lg:px-8 py-8 lg:py-12 border-b border-white/50">
+      <div class="relative flex-1 w-full flex items-center bg-[#171731] px-4 sm:px-6 lg:px-8 py-16 pb-24 overflow-hidden">
         
-        <div class="absolute inset-0 bg-dots-red-thick opacity-40 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center w-full relative z-10">
-          <div>
-            <div class="inline-flex items-center gap-1.5 bg-white text-[#171731] text-sm px-4 py-2 rounded-full mb-5 font-bold shadow-sm border border-white/60">
+        <!-- Particles Background Container -->
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        
+        <!-- Content Wrapper -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center w-full relative z-10 pointer-events-none">
+          
+          <!-- Left Content -->
+          <div class="text-left flex flex-col items-start pointer-events-auto">
+            <div class="inline-flex items-center gap-1.5 bg-white/5 backdrop-blur-md text-white border border-white/10 text-sm px-4 py-2 rounded-full mb-5 font-bold shadow-sm">
               <i class="ti ti-shield-check text-[#E50000] text-lg"></i> UGC-DEB Approved
             </div>
             
-            <h1 class="font-space text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#171731] leading-[1.2] tracking-tight mb-5">
+            <h1 class="font-poppins text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.15] tracking-tight mb-5">
               Get a Recognized Degree <br class="hidden sm:block" />
               <span class="text-[#E50000] whitespace-nowrap">Without Leaving Your Job.</span>
             </h1>
             
-            <p class="text-[#171731]/75 text-base sm:text-lg leading-relaxed max-w-lg mb-8 font-medium">
+            <p class="text-white/80 text-base md:text-xl leading-relaxed max-w-lg mb-8 font-medium">
               Elevate your career with the perfect blend of flexibility and academic excellence. Online distance education from India's top universities.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-              <button class="bg-[#E50000] text-white px-8 py-3.5 rounded-full font-semibold text-[15px] shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <button class="bg-[#E50000] text-white px-8 py-4 rounded-full font-bold text-[15px] shadow-[0_4px_14px_0_rgba(229,0,0,0.39)] hover:-translate-y-1 transition-all duration-300">
                 Book Free Counseling
               </button>
-              <button class="bg-white/40 backdrop-blur-sm border border-[#171731]/20 text-[#171731] hover:border-[#171731] hover:bg-[#171731] hover:text-white px-8 py-3.5 rounded-full font-semibold text-[15px] transition-all">
+              <button class="bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white hover:text-brand-dark hover:border-white px-8 py-4 rounded-full font-bold text-[15px] transition-all">
                 Explore Programs
               </button>
             </div>
           </div>
 
-          <div class="relative w-full aspect-video rounded-[24px] p-2 bg-white/50 backdrop-blur-md border border-white/80 shadow-xl group">
+          <!-- Right Video Card -->
+          <div class="relative w-full aspect-video rounded-3xl p-2 bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl pointer-events-auto">
             <iframe
               src="https://www.youtube.com/embed/HN9bDbp0dNM?autoplay=1&mute=1&loop=1&playlist=HN9bDbp0dNM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-              class="w-full h-full rounded-[16px] border-none"
+              class="w-full h-full rounded-[16px] border-none shadow-inner"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
               allowfullscreen>
             </iframe>
@@ -249,30 +253,29 @@
         </div>
       </div>
 
-      <!-- STATS SECTION (#E0D4C2) -->
-      <div class="bg-[#E0D4C2] pb-10 px-4 relative z-10 w-full flex-shrink-0" id="stats-section">
-        <div class="w-full mb-10" style="height: 0.5px; background-color: rgba(23,23,49,0.1);"></div>
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-14">
+      <!-- STATS SECTION (Overlapping Glass Pill) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-12 w-full" id="stats-section">
+        <div class="bg-white/70 backdrop-blur-xl border border-white/60 rounded-[2rem] shadow-[0_20px_40px_-15px_rgba(23,23,49,0.15)] py-8 px-6 lg:px-12 flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-x-14">
           <div class="text-center min-w-[130px]">
-            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+            <div class="font-poppins text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
               <span class="stat-counter" data-target="5000">0</span>+
             </div>
             <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Students guided</div>
           </div>
           <div class="text-center min-w-[130px]">
-            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+            <div class="font-poppins text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
               <span class="stat-counter" data-target="25">0</span>+
             </div>
             <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Partner universities</div>
           </div>
           <div class="text-center min-w-[130px]">
-            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+            <div class="font-poppins text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
               <span class="stat-counter" data-target="100">0</span>%
             </div>
             <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">UGC-DEB approved</div>
           </div>
           <div class="text-center min-w-[130px]">
-            <div class="font-space text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
+            <div class="font-poppins text-3xl sm:text-4xl font-bold text-[#E50000] flex items-center justify-center">
               <span class="stat-counter" data-target="4.9">0</span>/5
             </div>
             <div class="text-[11px] text-[#171731]/70 mt-2 uppercase tracking-widest font-bold">Google Rating</div>
@@ -338,14 +341,15 @@
     </script>
 
     <!-- ===================== ABOUT / STORY SECTION ===================== -->
-    <section class="relative bg-gray-100 py-20 px-4 overflow-hidden">
-      <div class="absolute -top-24 -right-24 w-96 h-96 bg-[rgba(229,0,0,0.05)] rounded-full blur-3xl pointer-events-none"></div>
+    <section class="relative bg-[#F4F5F8] py-20 px-4 overflow-hidden">
       <div class="relative max-w-6xl mx-auto">
-        <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2">About edYOUcate</div>
-        <h2 class="font-space text-3xl sm:text-4xl font-bold text-brand-text mb-3 tracking-tight max-w-2xl">
-          Surat's most trusted online education consultancy
-        </h2>
-        <p class="text-sm text-brand-muted mb-10 max-w-2xl">Who we are, what we believe in, and why 500+ students trust us</p>
+        <div class="text-center mb-12">
+          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">About edYOUcate</div>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-text mb-4 tracking-tight max-w-2xl mx-auto text-center">
+            Surat's most trusted online education consultancy
+          </h2>
+          <p class="text-sm text-brand-muted max-w-2xl mx-auto text-center">Who we are, what we believe in, and why 500+ students trust us</p>
+        </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
           <div class="h-full lg:col-span-2 bg-white border-t-4 border-t-brand-red border border-gray-200 rounded-3xl p-7 sm:p-9 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center">
@@ -353,24 +357,24 @@
               <i class="ti ti-bulb"></i>
             </div>
             <p class="text-[18px] text-brand-muted leading-relaxed mb-5">
-              <span class="font-space font-bold text-brand-text">edYOUcate</span> is a Surat-based education consultancy founded with one simple belief — that every student and working professional deserves access to quality higher education, <strong class="text-brand-text font-semibold">no matter their schedule, budget, or background.</strong>
+              <span class="font-poppins font-bold text-brand-text">edYOUcate</span> is a Surat-based education consultancy founded with one simple belief — that every student and working professional deserves access to quality higher education, <strong class="text-brand-text font-semibold">no matter their schedule, budget, or background.</strong>
             </p>
             <p class="text-[18px] text-brand-muted leading-relaxed mb-5">
               We saw too many talented people in Gujarat give up on their education dreams because traditional colleges didn't fit their lives. Full-time attendance, high fees, rigid schedules — these were barriers that <strong class="text-brand-text font-semibold">shouldn't exist in today's world.</strong>
             </p>
             <p class="text-[18px] text-brand-muted leading-relaxed mb-8">
-              So we built <span class="font-space font-bold text-brand-text">edYOUcate</span> — a consultancy that puts students first. We don't just help you enroll; we understand your life situation, recommend the right program honestly, handle all the paperwork, and support you long after admission day.
+              So we built <span class="font-poppins font-bold text-brand-text">edYOUcate</span> — a consultancy that puts students first. We don't just help you enroll; we understand your life situation, recommend the right program honestly, handle all the paperwork, and support you long after admission day.
             </p>
           </div>
 
           <div class="h-full relative rounded-3xl p-7 sm:p-9 bg-brand-dark overflow-hidden flex flex-col justify-center shadow-lg hover:-translate-y-1 transition-transform duration-300">
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(229,0,0,0.15),transparent_70%)] pointer-events-none"></div>
-            <div class="absolute -top-4 -right-2 font-space text-[120px] leading-none text-white/5 font-bold pointer-events-none select-none">"</div>
+            <div class="absolute -top-4 -right-2 font-poppins text-[120px] leading-none text-white/5 font-bold pointer-events-none select-none">"</div>
             <div class="relative z-10">
               <div class="inline-flex items-center gap-1.5 bg-white/10 border border-white/10 text-white text-[11px] font-semibold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6 backdrop-blur-md">
                 <i class="ti ti-target text-brand-red"></i> Our Mission
               </div>
-              <p class="font-space text-xl sm:text-2xl text-white leading-snug italic font-medium">
+              <p class="font-poppins text-xl sm:text-2xl text-white leading-snug italic font-medium">
                 "To empower every student and working professional in Surat with flexible, affordable, and career-focused higher education — so no one has to choose between their job, family, and academic future."
               </p>
             </div>
@@ -380,13 +384,13 @@
     </section>
 
     <!-- ===================== HALLMARKS (BENTO BOX LAYOUT) ===================== -->
-    <section id="hallmarks" class="bg-[#EAE0CF] py-20 lg:py-24 px-4">
+    <section id="hallmarks" class="bg-white py-20 lg:py-24 px-4">
       <div class="max-w-7xl mx-auto">
         
         <!-- Header -->
         <div class="text-center mb-12 lg:mb-16">
-          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2">The edYOUcate Advantage</div>
-          <h2 class="font-space text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-4 tracking-tight">
+          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">The edYOUcate Advantage</div>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-dark mb-4 tracking-tight text-center">
             Hallmarks of Online Courses
           </h2>
           <p class="text-sm sm:text-base text-brand-muted max-w-2xl mx-auto">
@@ -402,7 +406,7 @@
              <div class="w-12 h-12 rounded-full bg-[#E50000]/10 text-[#E50000] flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                <i class="ti ti-shield-check-filled"></i>
              </div>
-             <h3 class="font-space text-lg font-bold text-brand-dark mb-1.5">UGC Approved University</h3>
+             <h3 class="font-poppins text-lg font-bold text-brand-dark mb-1.5">UGC Approved University</h3>
              <p class="text-xs text-brand-muted">Fully recognized degrees valid for government jobs.</p>
           </div>
 
@@ -412,7 +416,7 @@
                <i class="ti ti-device-laptop"></i>
              </div>
              <div>
-               <h3 class="font-space text-xl font-bold text-brand-dark mb-1.5">Conduct Online Exam</h3>
+               <h3 class="font-poppins text-xl font-bold text-brand-dark mb-1.5">Conduct Online Exam</h3>
                <p class="text-sm text-brand-muted">Take your semester exams securely from the comfort of your home. No need to visit physical exam centers.</p>
              </div>
           </div>
@@ -422,7 +426,7 @@
              <div class="w-12 h-12 rounded-full bg-[#E50000]/10 text-[#E50000] flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                <i class="ti ti-clock"></i>
              </div>
-             <h3 class="font-space text-lg font-bold text-brand-dark mb-1.5">Flexible Timings</h3>
+             <h3 class="font-poppins text-lg font-bold text-brand-dark mb-1.5">Flexible Timings</h3>
              <p class="text-xs text-brand-muted">Study on your own schedule with 24/7 recorded lectures.</p>
           </div>
 
@@ -431,7 +435,7 @@
              <div class="w-12 h-12 rounded-2xl bg-white border border-gray-100 shadow-sm text-brand-dark flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                <i class="ti ti-school"></i>
              </div>
-             <h3 class="font-space text-lg font-bold text-brand-dark mb-1.5">Degree equivalent to regular</h3>
+             <h3 class="font-poppins text-lg font-bold text-brand-dark mb-1.5">Degree equivalent to regular</h3>
              <p class="text-xs text-brand-muted">Holds the exact same weightage as a full-time degree.</p>
           </div>
 
@@ -441,7 +445,7 @@
                <i class="ti ti-books"></i>
              </div>
              <div>
-               <h3 class="font-space text-xl font-bold text-brand-dark mb-1.5">Latest Curriculum and Syllabus</h3>
+               <h3 class="font-poppins text-xl font-bold text-brand-dark mb-1.5">Latest Curriculum and Syllabus</h3>
                <p class="text-sm text-brand-muted">Stay ahead with constantly updated study materials that reflect the newest industry trends and technologies.</p>
              </div>
           </div>
@@ -451,7 +455,7 @@
              <div class="w-12 h-12 rounded-2xl bg-white border border-gray-100 shadow-sm text-brand-dark flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                <i class="ti ti-briefcase"></i>
              </div>
-             <h3 class="font-space text-lg font-bold text-brand-dark mb-1.5">Industry Oriented Specializations</h3>
+             <h3 class="font-poppins text-lg font-bold text-brand-dark mb-1.5">Industry Oriented Specializations</h3>
              <p class="text-xs text-brand-muted">Curriculum designed by experts to meet corporate demands.</p>
           </div>
 
@@ -460,18 +464,20 @@
     </section>
 
     <!-- ===================== WHO WE HELP ===================== -->
-    <section id="who-we-help" class="bg-gray-100 py-20 px-4">
+    <section id="who-we-help" class="bg-[#F4F5F8] py-20 px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2">Who we help</div>
-        <h2 class="font-space text-3xl font-bold text-brand-text mb-2 tracking-tight">Built for students & working professionals</h2>
-        <p class="text-sm text-brand-muted mb-10 max-w-2xl">Pick the path that sounds like you — we'll show what edYOUcate solves for that journey</p>
+        <div class="text-center mb-12">
+          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">Who we help</div>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-text mb-4 tracking-tight text-center">Built for students & working professionals</h2>
+          <p class="text-sm text-brand-muted max-w-2xl mx-auto text-center">Pick the path that sounds like you — we'll show what edYOUcate solves for that journey</p>
+        </div>
 
         <div class="relative grid grid-cols-1 lg:grid-cols-2 rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
           <button onclick="switchTab(this, 'student')" class="audience-panel group relative text-left p-8 sm:p-10 transition-all duration-400 bg-[linear-gradient(135deg,#171731_0%,#232347_40%,#E50000_100%)] text-white" data-panel="student">
             <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-6 text-xl backdrop-blur-md">
               <i class="ti ti-school"></i>
             </div>
-            <h3 class="font-space text-2xl font-bold mb-2">Students</h3>
+            <h3 class="font-poppins text-2xl font-bold mb-2">Students</h3>
             <p class="text-sm text-white/80 leading-relaxed max-w-sm">Just finished school or college and want a flexible, affordable path to a recognized degree — without the rigidity of regular campus life.</p>
             <div class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold bg-white/15 px-3.5 py-1.5 rounded-full backdrop-blur-md">
               Viewing this path <i class="ti ti-arrow-right"></i>
@@ -482,7 +488,7 @@
             <div class="w-12 h-12 rounded-2xl bg-[rgba(229,0,0,0.08)] flex items-center justify-center mb-6 text-xl text-brand-red">
               <i class="ti ti-briefcase"></i>
             </div>
-            <h3 class="font-space text-2xl font-bold mb-2">Working professionals</h3>
+            <h3 class="font-poppins text-2xl font-bold mb-2">Working professionals</h3>
             <p class="text-sm text-brand-muted leading-relaxed max-w-sm">Already working full-time and want a recognized PG degree to unlock promotions — without quitting your job or losing your salary.</p>
             <div class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-red group-hover:gap-2.5 transition-all">
               Tap to view this path <i class="ti ti-arrow-right"></i>
@@ -518,11 +524,13 @@
     
 
     <!-- ===================== PROGRAMS ===================== -->
-    <section id="programs" class="bg-[#EAE0CF] py-20 px-4">
+    <section id="programs" class="bg-white py-20 px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2">Programs</div>
-        <h2 class="font-space text-3xl font-bold text-brand-text mb-2 tracking-tight">Online degrees that fit your life</h2>
-        <p class="text-sm text-brand-muted mb-10 max-w-2xl">UGC-DEB approved programs from India's recognized universities</p>
+        <div class="text-center mb-12">
+          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">Programs</div>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-text mb-4 tracking-tight text-center">Online degrees that fit your life</h2>
+          <p class="text-sm text-brand-muted max-w-2xl mx-auto text-center">UGC-DEB approved programs from India's recognized universities</p>
+        </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-5">
           
@@ -532,7 +540,7 @@
             <div class="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center text-3xl mb-6 backdrop-blur-md shadow-inner">
               💼
             </div>
-            <h3 class="font-space text-2xl font-bold mb-3">Postgraduate (PG)</h3>
+            <h3 class="font-poppins text-2xl font-bold mb-3">Postgraduate (PG)</h3>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="bg-white/15 text-white text-[11px] font-medium px-3 py-1.5 rounded-full backdrop-blur-md">MBA</span>
               <span class="bg-white/15 text-white text-[11px] font-medium px-3 py-1.5 rounded-full backdrop-blur-md">MCA</span>
@@ -554,7 +562,7 @@
               🎓
             </div>
             <div class="flex-1">
-              <h3 class="font-space text-xl font-bold text-brand-text mb-2">Undergraduate (UG)</h3>
+              <h3 class="font-poppins text-xl font-bold text-brand-text mb-2">Undergraduate (UG)</h3>
               <p class="text-sm text-brand-muted leading-relaxed mb-4">
                 Complete your graduation without leaving home or job. 3-year programs, fully online and flexible.
               </p>
@@ -577,7 +585,7 @@
               📜
             </div>
             <div class="flex-1">
-              <h3 class="font-space text-xl font-bold text-brand-text mb-2">Diploma & Certificate</h3>
+              <h3 class="font-poppins text-xl font-bold text-brand-text mb-2">Diploma & Certificate</h3>
               <p class="text-sm text-brand-muted leading-relaxed mb-4">
                 Fast-track skill upgrades for immediate career growth. 6–12 month programs, heavily industry-focused.
               </p>
@@ -597,11 +605,11 @@
     </section>
 
     <!-- ===================== PROCESS ===================== -->
-    <section id="process" class="bg-gray-100 py-20 px-4">
+    <section id="process" class="bg-[#F4F5F8] py-20 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12 lg:mb-16">
-          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2">How it works</div>
-          <h2 class="font-space text-3xl font-bold text-brand-text mb-3 tracking-tight">Get admitted in 4 simple steps</h2>
+          <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">How it works</div>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-text mb-4 tracking-tight text-center">Get admitted in 4 simple steps</h2>
           <p class="text-sm text-brand-muted max-w-2xl mx-auto">From first call to enrolled student — we handle everything</p>
         </div>
 
@@ -648,16 +656,16 @@
     </section>
 
     <!-- ===================== UNIVERSITIES ===================== -->
-    <section id="universities" class="bg-[#EAE0CF] py-20 lg:py-24 px-4 relative">
+    <section id="universities" class="bg-white py-20 lg:py-24 px-4 relative">
       
       <div class="max-w-7xl mx-auto relative z-10">
         
         <div class="text-center mb-12 sm:mb-16">
-          <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md text-brand-dark px-5 py-2 rounded-full mb-6 border border-brand-dark/20 shadow-sm">
+          <div class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md text-brand-dark px-5 py-2 rounded-full mb-6 border border-brand-dark/20 shadow-sm justify-center mx-auto">
              <i class="ti ti-building-bank text-[#E50000] text-lg"></i>
-             <h4 class="font-space text-sm font-bold uppercase tracking-wider mt-0.5">Global Recognition</h4>
+             <h4 class="font-poppins text-sm font-bold uppercase tracking-wider mt-0.5 text-center">Global Recognition</h4>
           </div>
-          <h2 class="font-space text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 tracking-tight">
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-dark mb-4 tracking-tight text-center">
             Our Elite Partner Universities
           </h2>
           <p class="text-sm sm:text-base text-brand-dark/75 max-w-2xl mx-auto font-medium px-4">
@@ -676,7 +684,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">LPU Online</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">LPU Online</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">High-tech online learning platform. Recognized for excellent placement records.</p>
              </div>
           </div>
@@ -690,7 +698,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Jain University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Jain University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Top-ranked online programs with industry-integrated curriculum. Recognized globally.</p>
              </div>
           </div>
@@ -704,7 +712,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Manipal Jaipur</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Manipal Jaipur</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Award-winning digital campus offering premium degrees. Focus on future-ready skills.</p>
              </div>
           </div>
@@ -718,7 +726,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Chandigarh Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Chandigarh Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">NAAC A+ accredited institution offering flexible learning. Dynamic placement support.</p>
              </div>
           </div>
@@ -732,7 +740,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Amity Online</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Amity Online</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">World-class education with a vast global alumni network. Premium interactive learning.</p>
              </div>
           </div>
@@ -746,7 +754,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Sikkim Manipal</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Sikkim Manipal</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Pioneer in distance education delivering high-quality healthcare and management programs.</p>
              </div>
           </div>
@@ -760,7 +768,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Uttaranchal Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Uttaranchal Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Premier multidisciplinary university known for its law, engineering, and management degrees.</p>
              </div>
           </div>
@@ -774,7 +782,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Dr. D.Y. Patil</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Dr. D.Y. Patil</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Renowned for outstanding medical and management programs. Exceptional digital infrastructure.</p>
              </div>
           </div>
@@ -790,7 +798,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">UPES Online</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">UPES Online</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Industry-aligned curriculum specializing in core sectors. Focused on specialized online MBA.</p>
              </div>
           </div>
@@ -804,7 +812,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">VGU Online</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">VGU Online</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Fostering innovation and entrepreneurship with flexible degree options for professionals.</p>
              </div>
           </div>
@@ -818,7 +826,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Vignan's University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Vignan's University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Strong emphasis on research and technical online education. NAAC A+ accredited.</p>
              </div>
           </div>
@@ -832,7 +840,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Shoolini University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Shoolini University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">India's top research university offering specialized online degrees with global perspectives.</p>
              </div>
           </div>
@@ -846,7 +854,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Shobhit University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Shobhit University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Combining tradition with modern technology. Excellent NAAC-accredited online programs.</p>
              </div>
           </div>
@@ -860,7 +868,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Sharda University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Sharda University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Truly global university with students from 90+ countries. State-of-the-art online curriculum.</p>
              </div>
           </div>
@@ -874,7 +882,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Amrita Vishwa Vid.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Amrita Vishwa Vid.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Highly ranked institution balancing academic excellence with human values.</p>
              </div>
           </div>
@@ -888,7 +896,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Mangalayatan Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Mangalayatan Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Innovative digital learning platform empowering students across diverse disciplines.</p>
              </div>
           </div>
@@ -902,7 +910,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">IGNOU</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">IGNOU</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">The world's largest university offering accessible, highly respected distance education.</p>
              </div>
           </div>
@@ -916,7 +924,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Jamia Hamdard</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Jamia Hamdard</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">A+ NAAC accredited institution renowned for its blend of modern and traditional studies.</p>
              </div>
           </div>
@@ -930,7 +938,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Kurukshetra Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Kurukshetra Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Highly respected state university providing flexible, UGC-approved distance programs.</p>
              </div>
           </div>
@@ -944,7 +952,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Andhra University</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Andhra University</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Historic institution delivering top-tier online engineering and arts programs.</p>
              </div>
           </div>
@@ -958,7 +966,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Bharathidasan Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Bharathidasan Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Leading educational hub in the south, offering comprehensive online degrees.</p>
              </div>
           </div>
@@ -972,7 +980,7 @@
                 </div>
              </div>
              <div class="relative bg-white border-t-[1.5px] sm:border-t-2 border-brand-dark p-3 sm:p-4 z-20 flex-1 flex flex-col justify-center">
-                <h3 class="font-space text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Galgotias Uni.</h3>
+                <h3 class="font-poppins text-[13px] sm:text-[15px] font-bold text-brand-dark leading-tight line-clamp-1 w-full">Galgotias Uni.</h3>
                 <p class="sm:hidden text-[10px] text-brand-dark/80 font-medium leading-[1.3] line-clamp-2 mt-1.5">Focuses on cutting-edge technology and management online programs for global leaders.</p>
              </div>
           </div>
@@ -1020,10 +1028,10 @@
       }
     </script>
     <!-- ===================== FAQ ===================== -->
-    <section id="faq" class="bg-gray-100 py-20 px-4">
+    <section id="faq" class="bg-[#F4F5F8] py-20 px-4">
       <div class="max-w-3xl mx-auto">
         <div class="text-[11px] text-brand-red font-semibold uppercase tracking-widest mb-2 text-center">FAQ</div>
-        <h2 class="font-space text-3xl font-bold text-brand-text mb-6 tracking-tight text-center">Common questions answered</h2>
+        <h2 class="font-poppins text-3xl md:text-4xl font-bold text-brand-text mb-8 tracking-tight text-center">Common questions answered</h2>
 
         <div class="relative mb-8">
           <i class="ti ti-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-base"></i>
@@ -1070,7 +1078,7 @@
       <div class="relative overflow-hidden bg-brand-dark rounded-3xl py-12 px-6 sm:px-12 text-center shadow-xl">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgba(229,0,0,0.15),transparent_65%)] pointer-events-none"></div>
         <div class="relative z-10">
-          <h2 class="font-space text-2xl sm:text-3xl font-bold text-white mb-3 tracking-tight">Start your journey today — for free</h2>
+          <h2 class="font-poppins text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight text-center">Start your journey today — for free</h2>
           <p class="text-white/70 text-sm mb-8 max-w-lg mx-auto">Enter your number and our counselor will call you within 24 hours. No pressure, no spam.</p>
           <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input type="tel" placeholder="Your WhatsApp number" class="flex-1 w-full px-4 py-3.5 rounded-xl border border-white/15 text-sm bg-white/5 text-white placeholder:text-white/45 focus:outline-none focus:ring-2 focus:ring-brand-red/50" />
@@ -1086,220 +1094,220 @@
     <!-- ===================== FOOTER & CTA SECTION ===================== -->
     <footer id="contact" class="bg-brand-dark pt-16 pb-6 relative overflow-hidden">
       
-      <!-- 1. TOP BANNER: WhatsApp CTA & Reviews -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
-          
-          <!-- WhatsApp Card -->
-          <div class="flex-1 bg-white/5 rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-8 lg:px-10 lg:py-10 border border-white/10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-8 relative overflow-hidden group hover:bg-white/10 transition-colors duration-500">
+      <!-- 1. TOP BANNER: WhatsApp CTA -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10 flex flex-col gap-8">
+        
+        <!-- FULL WIDTH WHATSAPP CARD -->
+        <div class="w-full bg-[#0f172a] rounded-[2rem] p-8 md:p-10 border border-white/10 shadow-2xl relative overflow-hidden">
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
             
-            <!-- Left Content (Icon, Text & Desktop Button) -->
-            <div class="flex flex-row gap-3 sm:gap-6 items-start md:items-center w-full text-left">
+            <!-- Left: Content & Features -->
+            <div class="flex-1 w-full">
+              <span class="inline-block bg-[#1a2e24] text-[#25d366] text-xs font-bold px-3 py-1 rounded-full mb-4 border border-[#25d366]/20">
+                STAY UPDATED · FREE FOREVER
+              </span>
               
-              <!-- WhatsApp Icon (Pushed down on mobile using mt-8, reset on desktop with md:mt-0) -->
-              <i class="ti ti-brand-whatsapp text-[42px] sm:text-[85px] text-white shrink-0 drop-shadow-lg leading-none mt-8 md:mt-0"></i>
+              <h3 class="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 tracking-tight">
+                Education Updates <span class="text-[#25d366]">at Your Fingertips!</span>
+              </h3>
               
-              <!-- Text Block -->
-              <div class="flex flex-col items-start w-full">
-                <span class="bg-[#25D366]/20 text-[#25D366] px-2 py-1 sm:px-3 sm:py-1.5 rounded-md text-[9px] sm:text-[10px] font-bold uppercase tracking-wider mb-1.5 sm:mb-2.5 inline-block leading-none">Stay Updated</span>
-                <h3 class="text-white text-[19px] sm:text-3xl lg:text-[2.1rem] font-bold font-space mb-1 sm:mb-2 leading-[1.15] tracking-tight">
-                  Education Updates <br class="hidden xl:block" />
-                  <span class="text-[#25D366]">at Your Fingertips!</span>
-                </h3>
-                <p class="text-white/70 text-[11px] sm:text-sm max-w-md leading-snug m-0">
-                  Latest news, alerts, results, admissions & more – straight to your WhatsApp.
-                </p>
+              <p class="text-white/70 text-sm md:text-base mb-6 max-w-3xl">
+                Latest news, alerts, results, admissions & more — straight to your WhatsApp. Stay informed without searching multiple websites.
+              </p>
+
+              <!-- Feature Grid & Button Row -->
+              <div class="flex flex-col xl:flex-row xl:items-end justify-between gap-8">
                 
-                <!-- DESKTOP ONLY: Join Group Button -->
-                <a href="https://whatsapp.com/channel/0029Va6AaecHVvThA8mhvO3O" target="_blank" class="hidden md:flex mt-6 group bg-white/10 hover:bg-white/20 border border-white/10 text-white px-6 py-3 rounded-xl font-bold items-center justify-center w-full sm:w-auto gap-2 transition-all duration-300 shadow-sm hover:-translate-y-1">
-                  Join WhatsApp Channel <i class="ti ti-arrow-up-right text-xl opacity-80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                </a>
-
-                <!-- MOBILE ONLY: Side-by-side Button & QR -->
-                <div class="flex md:hidden flex-row items-center justify-between w-full mt-1 pt-4 border-t border-white/10">
-                  
-                  <!-- Button -->
-                  <a href="https://whatsapp.com/channel/0029Va6AaecHVvThA8mhvO3O" target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/10 text-white px-3.5 py-2.5 rounded-lg font-bold flex items-center justify-center text-[11px] gap-1.5 transition-all duration-300 shadow-sm leading-none text-center whitespace-nowrap">
-                    Join Channel <i class="ti ti-arrow-up-right text-[12px] opacity-80"></i>
-                  </a>
-                  
-                  <!-- QR Code Section -->
-                  <div class="shrink-0 flex items-center gap-2 pl-3 border-l border-white/10">
-                    <div class="bg-white p-1 rounded-xl w-[48px] h-[48px] flex items-center justify-center shadow-xl shrink-0">
-                      <img src="qr-code.png" alt="QR" class="w-full h-full object-contain" />
-                    </div>
-                    <div class="flex flex-col text-left shrink-0">
-                      <span class="text-white/80 text-[9px] font-medium leading-[1.1]">Scan to</span>
-                      <span class="text-white/80 text-[9px] font-medium leading-[1.1]">Follow</span>
-                      <i class="ti ti-corner-left-up text-[#25D366] text-[11px] leading-none mt-0.5"></i>
-                    </div>
-                  </div>
-
+                <!-- Features -->
+                <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                  <ul class="space-y-3 text-white/80 text-sm">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Admission alerts</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Scholarship updates</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> University admissions</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Open schooling updates</li>
+                  </ul>
+                  <ul class="space-y-3 text-white/80 text-sm">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Entrance exams</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Results</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Career guidance tips</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#25d366]"></span> Online & distance degrees</li>
+                  </ul>
                 </div>
 
+                <!-- Social Proof & Button -->
+                <div class="flex flex-col sm:flex-row xl:flex-col items-start gap-5 xl:min-w-[280px]">
+                  <div class="flex items-center">
+                    <div class="flex -space-x-2">
+                      <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white border-2 border-[#0f172a]">A</div>
+                      <div class="w-7 h-7 rounded-full bg-green-600 flex items-center justify-center text-[10px] font-bold text-white border-2 border-[#0f172a]">P</div>
+                      <div class="w-7 h-7 rounded-full bg-brand-red flex items-center justify-center text-[10px] font-bold text-white border-2 border-[#0f172a]">R</div>
+                    </div>
+                    <span class="ml-3 text-xs text-white/60 font-medium">5,000+ students joined</span>
+                  </div>
+                  
+                  <a href="https://whatsapp.com/channel/0029Va6AaecHVvThA8mhvO3O" target="_blank" class="bg-[#25d366] hover:bg-[#20bd5a] text-[#171731] font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto">
+                    <i class="ti ti-brand-whatsapp text-xl"></i> Join WhatsApp Channel
+                  </a>
+                </div>
               </div>
             </div>
 
-            <!-- DESKTOP ONLY: Right Content QR Code -->
-            <div class="hidden md:flex shrink-0 flex-col items-center justify-center md:pl-10 md:border-l border-white/10">
-              <div class="bg-white p-2 rounded-2xl w-[130px] h-[130px] flex items-center justify-center shadow-xl relative group-hover:scale-105 transition-transform duration-500 overflow-hidden">
-                <img src="qr-code.png" alt="WhatsApp QR Code" class="w-full h-full object-contain" />
+            <!-- Right: QR Code -->
+            <div class="shrink-0 flex flex-col items-center justify-center bg-white/5 rounded-2xl p-6 border border-white/5 w-full lg:w-auto">
+              <div class="bg-white p-2 rounded-xl mb-4">
+                <img src="qr-code.png" alt="WhatsApp QR" class="w-24 h-24 object-contain" />
               </div>
-              <p class="text-white/80 text-[11px] font-medium mt-3 flex items-center gap-1.5">
-                <i class="ti ti-corner-left-up text-[#25D366] text-base leading-none"></i> Scan to Follow
-              </p>
+              <p class="text-[#25d366] text-xs font-bold mb-4">Scan to follow instantly</p>
+              <div class="flex gap-5 text-center">
+                <div><div class="text-white font-bold text-sm">5K+</div><div class="text-[9px] text-white/50 uppercase tracking-wider">Members</div></div>
+                <div><div class="text-white font-bold text-sm">Daily</div><div class="text-[9px] text-white/50 uppercase tracking-wider">Updates</div></div>
+                <div><div class="text-white font-bold text-sm">Free</div><div class="text-[9px] text-white/50 uppercase tracking-wider">Forever</div></div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- 2. FOOTER LINKS & REVIEWS COLUMN -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- 4-column grid on desktop -->
+        <div class="border-t border-white/10 pt-12 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+          
+          <!-- Column 1: Brand & Socials -->
+          <div class="col-span-1 flex flex-col items-start text-left">
+            <div class="flex font-poppins text-2xl font-bold text-white mb-3 items-center gap-2">
+               <div class="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center text-white"><i class="ti ti-school"></i></div>
+               edYOUcate
+            </div>
+            
+            <p class="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
+              Empowering Education, Inspiring Futures. Surat's most trusted online education consultancy.
+            </p>
+            <div class="flex items-center gap-3">
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/edyoucategroup" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#1877F2] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-facebook text-lg"></i></a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/edyoucate_group" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#E1306C] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-instagram text-lg"></i></a>
+              <!-- YouTube -->
+              <a href="https://www.youtube.com/@edYOUcateGroup" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#FF0000] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-youtube text-lg"></i></a>
+              <!-- WhatsApp -->
+              <a href="https://wa.me/918866230077" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#25D366] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-whatsapp text-lg"></i></a>
+            </div>
           </div>
 
-          <!-- Reviews Column (Side-by-side on mobile, stacked on desktop) -->
-          <div class="grid grid-cols-2 lg:flex lg:flex-col lg:w-[320px] shrink-0 gap-3 sm:gap-4">
+          <!-- Column 2: Quick Links -->
+          <div class="col-span-1 flex flex-col items-start">
+            <h4 class="text-white font-bold mb-5 tracking-wide text-[15px] sm:text-base">Quick Links</h4>
+            <ul class="flex flex-col gap-3">
+              <li><a href="#" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Home</a></li>
+              <li><a href="#about" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> About Us</a></li>
+              <li><a href="#programs" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Programs</a></li>
+              <li><a href="#universities" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Universities</a></li>
+              <li><a href="#faq" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div class="col-span-1 flex flex-col items-start">
+            <h4 class="text-white font-bold mb-5 tracking-wide text-[15px] sm:text-base">Contact Us</h4>
+            <ul class="flex flex-col gap-4">
+              <li>
+                <a href="mailto:info@edyoucate.com" class="text-white/60 text-[13px] sm:text-sm hover:text-white transition-colors flex items-start gap-3 break-all">
+                  <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-mail text-brand-red text-base sm:text-lg"></i></span>
+                  info@edyoucate.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+911234567890" class="text-white/60 text-[13px] sm:text-sm hover:text-white transition-colors flex items-start gap-3">
+                  <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-phone text-brand-red text-base sm:text-lg"></i></span>
+                  +91 12345 67890
+                </a>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-map-pin text-brand-red text-base sm:text-lg"></i></span>
+                <span class="text-white/60 text-[13px] sm:text-sm leading-relaxed">Surat, Gujarat, India</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Reviews (Stacked Vertically & Scaled Down) -->
+          <div class="col-span-1 flex flex-col items-start gap-4">
+            <h4 class="text-white font-bold mb-2 tracking-wide text-[15px] sm:text-base">Student Reviews</h4>
             
-            <!-- Google Review Card -->
-            <div class="bg-white rounded-xl sm:rounded-2xl overflow-hidden flex flex-col shadow-xl border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
-              <div class="p-3 sm:p-5 flex-1 flex flex-col justify-center">
-                <div class="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-                  <!-- Google SVG Logo -->
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-6 h-6 sm:w-8 sm:h-8 shrink-0">
+            <!-- Google Review Card (Smaller) -->
+            <div class="w-full max-w-[260px] bg-white rounded-xl overflow-hidden flex flex-col shadow-lg border border-white/10 hover:-translate-y-1 transition-transform duration-300">
+              <div class="p-3 sm:p-4 flex-1 flex flex-col justify-center">
+                <div class="flex items-center gap-2.5 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-6 h-6 shrink-0">
                     <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
                     <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
                     <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
                     <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
                   </svg>
                   <div>
-                    <h4 class="text-[#4285F4] font-bold text-[14px] sm:text-[19px] leading-none tracking-tight">Google</h4>
-                    <p class="text-gray-500 text-[10px] sm:text-[13px] font-medium mt-0.5">Reviews</p>
+                    <h4 class="text-[#4285F4] font-bold text-base leading-none tracking-tight">Google</h4>
+                    <p class="text-gray-500 text-[10px] font-medium mt-0.5">Reviews</p>
                   </div>
                 </div>
-                <div class="flex items-center gap-2 sm:gap-4">
-                  <div class="font-black text-xl sm:text-3xl text-brand-dark leading-none">4.9<span class="text-[11px] sm:text-base text-gray-400 font-bold">/5</span></div>
-                  <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
-                  <div class="flex flex-col">
-                    <div class="flex text-[#FBBC05] text-[10px] sm:text-sm gap-0.5">
+                <div class="flex items-center gap-2.5">
+                  <div class="font-black text-xl text-brand-dark leading-none">
+                    4.9<span class="text-xs text-gray-400 font-bold">/5</span>
+                  </div>
+                  <div class="w-px h-6 bg-gray-200"></div>
+                  <div class="flex flex-col justify-center">
+                    <div class="flex text-[#FBBC05] text-[10px] gap-0.5">
                       <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
                     </div>
-                    <span class="text-[8px] sm:text-[10px] text-gray-400 font-semibold mt-0.5">Based on 200+ reviews</span>
+                    <span class="text-[9px] text-gray-400 font-semibold mt-0.5">Based on 200+ reviews</span>
                   </div>
                 </div>
               </div>
-              <a href="https://www.google.com/search?sca_esv=cfa1734cbc4e78a4&sxsrf=APpeQnuPqr2vtZ6HdYVkxrjQPjaP8x-iMA:1781961754850&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-__pPkXp2K-Otba7VYeBcveVv7D_z9B3T-GUpp79WrIAQzeZ2Qw4LzEIPa4G8XCfTQuJAXMMeEV7M7txPM0Nb2zRrXQsUesMsEjydrAs5Kto0DCprMvj1XNOPLPqyj4NNNcRnSWg-Xh39nXdcrr0QjWSInp5y518GBDbjXOKroO5m_NYQt8I0sXSfQ9sjeGuIvbqcA06vnimllJ7vBhIM9-jbpMBZ&q=edYOUcate+%7C+Best+NIOS+Admission+%26+Study+Center+in+Surat+%7C+Best+Distance+Education+Consultant+in+Surat+Reviews&sa=X&ved=2ahUKEwjIsprr9JWVAxWRWusIHcQJFWcQ0bkNegQIRxAH&biw=1920&bih=945&dpr=1" class="bg-[#171731] text-white text-center py-2 sm:py-2.5 text-[10px] sm:text-[13px] font-semibold hover:bg-[#E50000] transition-colors flex items-center justify-center gap-1 sm:gap-1.5 group">
-                <span class="hidden sm:inline">Click to view on Google</span>
-                <span class="sm:hidden">View on Google</span>
-                <i class="ti ti-external-link text-[11px] sm:text-base group-hover:scale-110 transition-transform"></i>
+              <a href="https://www.google.com/search?q=edYOUcate+%7C+Best+Distance+Education+Consultant+in+Surat" target="_blank" class="bg-brand-dark text-white text-center py-2 text-[11px] font-semibold hover:bg-brand-red transition-colors flex items-center justify-center gap-1.5 group">
+                Click to view on Google
+                <i class="ti ti-external-link text-[11px] group-hover:scale-110 transition-transform"></i>
               </a>
             </div>
 
-            <!-- Justdial Review Card -->
-            <div class="bg-white rounded-xl sm:rounded-2xl overflow-hidden flex flex-col shadow-xl border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
-              <div class="p-3 sm:p-5 flex-1 flex flex-col justify-center">
-                <div class="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-                  <!-- JD Text Logo -->
-                  <div class="shrink-0 flex items-center justify-center">
-                     <span class="text-[#0052CC] font-black text-xl sm:text-3xl leading-none">J</span><span class="text-[#FF7A00] font-black text-xl sm:text-3xl leading-none">d</span>
+            <!-- Justdial Review Card (Smaller) -->
+            <div class="w-full max-w-[260px] bg-white rounded-xl overflow-hidden flex flex-col shadow-lg border border-white/10 hover:-translate-y-1 transition-transform duration-300">
+              <div class="p-3 sm:p-4 flex-1 flex flex-col justify-center">
+                <div class="flex items-center gap-2.5 mb-3">
+                  <div class="shrink-0 flex items-center justify-center w-6 h-6">
+                    <span class="text-[#0052CC] font-black text-xl leading-none font-poppins">J</span><span class="text-[#FF7A00] font-black text-xl leading-none font-poppins">d</span>
                   </div>
                   <div>
-                    <h4 class="leading-none tracking-tight"><span class="text-[#0052CC] font-bold text-[14px] sm:text-[19px]">Just</span><span class="text-[#FF7A00] font-bold text-[14px] sm:text-[19px]">dial</span></h4>
-                    <p class="text-gray-500 text-[10px] sm:text-[13px] font-medium mt-0.5">Reviews</p>
+                    <h4 class="leading-none tracking-tight">
+                      <span class="text-[#0052CC] font-bold text-base">Just</span><span class="text-[#FF7A00] font-bold text-base">dial</span>
+                    </h4>
+                    <p class="text-gray-500 text-[10px] font-medium mt-0.5">Reviews</p>
                   </div>
                 </div>
-                <div class="flex items-center gap-2 sm:gap-4">
-                  <div class="font-black text-xl sm:text-3xl text-brand-dark leading-none">4.9<span class="text-[11px] sm:text-base text-gray-400 font-bold">/5</span></div>
-                  <div class="hidden sm:block w-px h-8 bg-gray-200"></div>
-                  <div class="flex flex-col">
-                    <div class="flex text-[#FBBC05] text-[10px] sm:text-sm gap-0.5">
+                <div class="flex items-center gap-2.5">
+                  <div class="font-black text-xl text-brand-dark leading-none">
+                    4.9<span class="text-xs text-gray-400 font-bold">/5</span>
+                  </div>
+                  <div class="w-px h-6 bg-gray-200"></div>
+                  <div class="flex flex-col justify-center">
+                    <div class="flex text-[#FBBC05] text-[10px] gap-0.5">
                       <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
                     </div>
-                    <span class="text-[8px] sm:text-[10px] text-gray-400 font-semibold mt-0.5">Based on 150+ reviews</span>
+                    <span class="text-[9px] text-gray-400 font-semibold mt-0.5">Based on 150+ reviews</span>
                   </div>
                 </div>
               </div>
-              <a href="https://jsdl.in/DT-54NP6AM21TY" class="bg-[#171731] text-white text-center py-2 sm:py-2.5 text-[10px] sm:text-[13px] font-semibold hover:bg-[#E50000] transition-colors flex items-center justify-center gap-1 sm:gap-1.5 group">
-                <span class="hidden sm:inline">Click to view on Justdial</span>
-                <span class="sm:hidden">View on Justdial</span>
-                <i class="ti ti-external-link text-[11px] sm:text-base group-hover:scale-110 transition-transform"></i>
+              <a href="https://jsdl.in/DT-54NP6AM21TY" target="_blank" class="bg-brand-dark text-white text-center py-2 text-[11px] font-semibold hover:bg-brand-red transition-colors flex items-center justify-center gap-1.5 group">
+                Click to view on Justdial
+                <i class="ti ti-external-link text-[11px] group-hover:scale-110 transition-transform"></i>
               </a>
             </div>
 
           </div>
-        </div>
-      </div>
-
-      <!-- 2. FOOTER LINKS -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Changed to a 2-column grid on mobile, 3-column on desktop -->
-        <div class="border-t border-white/10 pt-12 pb-8 grid grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-8 gap-y-10 lg:gap-16">
-          
-          <!-- Column 1: Brand & Socials (Spans 2 columns on mobile, centers content) -->
-          <div class="col-span-2 lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-            
-            <!-- Logo & Name (Hidden on phones/iPads, visible on desktop) -->
-            <div class="hidden lg:flex font-space text-2xl font-bold text-white mb-3 items-center gap-2">
-               <div class="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center text-white"><i class="ti ti-school"></i></div>
-               edYOUcate
-            </div>
-            
-            <p class="text-white/60 text-sm leading-relaxed mb-6 max-w-xs mx-auto lg:mx-0">
-              Empowering Education, Inspiring Futures. Surat's most trusted online education consultancy.
-            </p>
-            <div class="flex items-center justify-center lg:justify-start gap-3">
-              <!-- Facebook: Brand Blue -->
-              <a href="https://www.facebook.com/edyoucategroup" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#1877F2] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-facebook text-lg"></i></a>
-              <!-- Instagram: Brand Pink/Red -->
-              <a href="https://www.instagram.com/edyoucate_group" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#E1306C] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-instagram text-lg"></i></a>
-              <!-- X (Twitter): Black -->
-              <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-black hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-x text-lg"></i></a>
-              <!-- YouTube: Brand Red -->
-              <a href="https://www.youtube.com/@edYOUcateGroup" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#FF0000] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-youtube text-lg"></i></a>
-              <!-- WhatsApp: Brand Green -->
-              <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#25D366] hover:-translate-y-1 transition-all duration-300"><i class="ti ti-brand-whatsapp text-lg"></i></a>
-            </div>
-          </div>
-
-          <!-- Column 2: Quick Links (Centered block on mobile, perfectly straight bullets) -->
-          <div class="col-span-1 flex flex-col items-center lg:items-start">
-            <div class="w-fit">
-              <h4 class="text-white font-bold mb-4 sm:mb-5 tracking-wide text-[15px] sm:text-base">Quick Links</h4>
-              <ul class="flex flex-col gap-3">
-                <li><a href="#" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Home</a></li>
-                <li><a href="#about" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> About Us</a></li>
-                <li><a href="#programs" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Programs</a></li>
-                <li><a href="#universities" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> Universities</a></li>
-                <li><a href="#faq" class="text-white/60 text-[13px] sm:text-sm hover:text-brand-red transition-colors flex items-center gap-3"><span class="w-5 flex justify-center shrink-0"><i class="ti ti-point text-brand-red/50 text-base"></i></span> FAQ</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Column 3: Contact Us (Centered block on mobile, perfectly straight icons) -->
-          <div class="col-span-1 flex flex-col items-center lg:items-start">
-            <div class="w-fit">
-              <h4 class="text-white font-bold mb-4 sm:mb-5 tracking-wide text-[15px] sm:text-base">Contact Us</h4>
-              <ul class="flex flex-col gap-4">
-                <li>
-                  <a href="mailto:info@edyoucate.com" class="text-white/60 text-[13px] sm:text-sm hover:text-white transition-colors flex items-start gap-3 break-all">
-                    <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-mail text-brand-red text-base sm:text-lg"></i></span>
-                    info@edyoucate.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+911234567890" class="text-white/60 text-[13px] sm:text-sm hover:text-white transition-colors flex items-start gap-3">
-                    <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-phone text-brand-red text-base sm:text-lg"></i></span>
-                    +91 12345 67890
-                  </a>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="w-5 flex justify-center shrink-0 mt-0.5"><i class="ti ti-map-pin text-brand-red text-base sm:text-lg"></i></span>
-                  <span class="text-white/60 text-[13px] sm:text-sm leading-relaxed">Surat, Gujarat, India</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
       </div>
 
       <!-- 3. BOTTOM COPYRIGHT BAR -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="mt-4 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <p>© 2026 edYOUcate. All rights reserved.</p>
           <p class="flex items-center gap-1.5">
             Designed with <i class="ti ti-heart-filled text-brand-red text-sm"></i> for learners like you.
@@ -1374,6 +1382,51 @@
         });
         document.getElementById("faq-empty")?.classList.toggle("hidden", visibleCount > 0);
       }
+    </script>
+    <!-- Particles.js Initialization Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof particlesJS !== "undefined") {
+          particlesJS("particles-js", {
+            "particles": {
+              "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+              "color": { "value": "#E50000" }, // Brand Red Dots
+              "shape": { "type": "circle" },
+              "opacity": { "value": 0.6, "random": false },
+              "size": { "value": 3, "random": true },
+              "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff", // White connecting lines
+                "opacity": 0.2,
+                "width": 1
+              },
+              "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+              }
+            },
+            "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                "onhover": { "enable": true, "mode": "grab" },
+                "onclick": { "enable": true, "mode": "push" },
+                "resize": true
+              },
+              "modes": {
+                "grab": { "distance": 200, "line_linked": { "opacity": 0.8 } },
+                "push": { "particles_nb": 4 }
+              }
+            },
+            "retina_detect": true
+          });
+        }
+      });
     </script>
   </body>
 </html>

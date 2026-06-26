@@ -112,12 +112,14 @@
       </a>
 
       <!-- Continuous Gradient Menu -->
-      <div class="hidden lg:flex menu-gradient-span font-bold text-[16px] gap-8">
+      <div class="hidden lg:flex menu-gradient-span font-bold text-[14px] xl:text-[15px] gap-4 xl:gap-6">
         <a href="#">Home</a>
+        <a href="#hallmarks">Why Us</a>
+        <a href="#who-we-help">Who We Help</a>
         <a href="#programs">Programs</a>
-        <a href="#universities">Universities</a>
         <a href="#process">Process</a>
-        <a href="#stories">Success Stories</a>
+        <a href="#universities">Universities</a>
+        <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
@@ -142,12 +144,14 @@
       class="absolute top-20 left-0 w-full lg:hidden overflow-hidden bg-white border-t border-gray-200 shadow-xl"
       style="max-height: 0; opacity: 0; pointer-events: none; transition: all 0.3s ease;">
       <div class="px-6 py-6">
-        <div class="flex flex-col items-start gap-6 mb-6 text-[15px] font-bold text-[#171731]">
+        <div class="flex flex-col items-start gap-4 mb-6 text-[15px] font-bold text-[#171731]">
           <a href="#" class="hover:text-[#E50000]">Home</a>
+          <a href="#hallmarks" class="hover:text-[#E50000]">Why Us</a>
+          <a href="#who-we-help" class="hover:text-[#E50000]">Who We Help</a>
           <a href="#programs" class="hover:text-[#E50000]">Programs</a>
-          <a href="#universities" class="hover:text-[#E50000]">Universities</a>
           <a href="#process" class="hover:text-[#E50000]">Process</a>
-          <a href="#stories" class="hover:text-[#E50000]">Success Stories</a>
+          <a href="#universities" class="hover:text-[#E50000]">Universities</a>
+          <a href="#reviews" class="hover:text-[#E50000]">Reviews</a>
           <a href="#faq" class="hover:text-[#E50000]">FAQ</a>
           <a href="#contact" class="hover:text-[#E50000]">Contact</a>
         </div>
@@ -1414,15 +1418,22 @@
       }
     }
   </script>
-    <!-- ===================== REVIEWS ===================== -->
+  <!-- ===================== REVIEWS ===================== -->
   <style>
     @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-50% - 10px)); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-50% - 10px));
+      }
     }
+
     .animate-marquee {
       animation: marquee 40s linear infinite;
     }
+
     @media (max-width: 768px) {
       .animate-marquee {
         animation: marquee 80s linear infinite;
@@ -1440,364 +1451,449 @@
         </p>
       </div>
 
-      <div class="relative overflow-hidden w-full" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+      <div class="relative overflow-hidden w-full"
+        style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
         <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
           <div class="flex gap-5 pr-5">
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I was really confused about which online university to choose for my BCA. The team at edYOUcate explained every option to me patiently. Helped me complete the admission process. I did not feel any stress all. Everything was transparent and smooth. I highly recommend edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Rishi Dakoria
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I was really confused about which online university to choose for my BCA. The team at edYOUcate
+                explained every option to me patiently. Helped me complete the admission process. I did not feel any
+                stress all. Everything was transparent and smooth. I highly recommend edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Rishi Dakoria
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The counselors at edYOUcate were very helpful. They never rushed me into making a decision. They compared universities and suggested the one that suited my budget and career plans. My experience with edYOUcate was great.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Darshan Gosai
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The counselors at edYOUcate were very helpful. They never rushed me into making a decision. They
+                compared universities and suggested the one that suited my budget and career plans. My experience with
+                edYOUcate was great.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Darshan Gosai
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I am a working professional and I needed a flexible degree program. EdYOUcate helped me find the online MBA. They handled all the documentation for me. Their support was excellent from start to finish. I am really happy with edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Vishnu Gilitwala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I am a working professional and I needed a flexible degree program. EdYOUcate helped me find the online
+                MBA. They handled all the documentation for me. Their support was excellent from start to finish. I am
+                really happy with edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Vishnu Gilitwala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The admission process was much easier than I expected. Every document was checked carefully by edYOUcate. Whenever I had a question they responded quickly. I am really satisfied with their service at edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Krish Bhanawala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The admission process was much easier than I expected. Every document was checked carefully by
+                edYOUcate. Whenever I had a question they responded quickly. I am really satisfied with their service at
+                edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Krish Bhanawala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I visited multiple consultants before choosing edYOUcate. They explained the difference between universities honestly. They did not try to sell me the expensive option. This built my trust in edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Dev Singapuri
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I visited multiple consultants before choosing edYOUcate. They explained the difference between
+                universities honestly. They did not try to sell me the expensive option. This built my trust in
+                edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Dev Singapuri
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I was not sure if an online degree would be recognized. The team at edYOUcate explained everything about UGC-DEB approval. They cleared all my doubts. The people at edYOUcate are very professional and supportive.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Mustafa Kanchwala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I was not sure if an online degree would be recognized. The team at edYOUcate explained everything about
+                UGC-DEB approval. They cleared all my doubts. The people at edYOUcate are very professional and
+                supportive.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Mustafa Kanchwala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The entire admission process was completed smoothly by edYOUcate. They kept updating me at every step. I never had to worry about paperwork. I would definitely recommend edYOUcate to anyone looking for distance education.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Meet Dalal
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The entire admission process was completed smoothly by edYOUcate. They kept updating me at every step. I
+                never had to worry about paperwork. I would definitely recommend edYOUcate to anyone looking for
+                distance education.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Meet Dalal
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I got genuine guidance from edYOUcate. They suggested the course according to my career goals. They did not push options. The counselors at edYOUcate are friendly and knowledgeable.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Vatsal Patel
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I got genuine guidance from edYOUcate. They suggested the course according to my career goals. They did
+                not push options. The counselors at edYOUcate are friendly and knowledgeable.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Vatsal Patel
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I wanted to continue my studies while managing my job. EdYOUcate helped me choose the university. Their guidance made everything simple for me. This was especially helpful since I was applying for the time.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Sneha Choksi
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I wanted to continue my studies while managing my job. EdYOUcate helped me choose the university. Their
+                guidance made everything simple for me. This was especially helpful since I was applying for the time.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Sneha Choksi
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I got service from edYOUcate. They responded quickly to my queries. Whenever I had doubts regarding fees, eligibility or admission they explained everything clearly. My experience with edYOUcate was smooth and hassle-free.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Riya Patel
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I got service from edYOUcate. They responded quickly to my queries. Whenever I had doubts regarding
+                fees, eligibility or admission they explained everything clearly. My experience with edYOUcate was
+                smooth and hassle-free.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Riya Patel
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I had almost given up on continuing my education because of my work schedule. Thanks to edYOUcate I found a degree that fits perfectly into my routine. I am really happy, with the support I got from edYOUcate throughout the process.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Tisha Bariya
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I had almost given up on continuing my education because of my work schedule. Thanks to edYOUcate I
+                found a degree that fits perfectly into my routine. I am really happy, with the support I got from
+                edYOUcate throughout the process.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Tisha Bariya
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
+            </div>
           </div>
           <!-- DUPLICATE FOR INFINITE SCROLL -->
           <div class="flex gap-5 pr-5" aria-hidden="true">
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I was really confused about which online university to choose for my BCA. The team at edYOUcate explained every option to me patiently. Helped me complete the admission process. I did not feel any stress all. Everything was transparent and smooth. I highly recommend edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Rishi Dakoria
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I was really confused about which online university to choose for my BCA. The team at edYOUcate
+                explained every option to me patiently. Helped me complete the admission process. I did not feel any
+                stress all. Everything was transparent and smooth. I highly recommend edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Rishi Dakoria
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The counselors at edYOUcate were very helpful. They never rushed me into making a decision. They compared universities and suggested the one that suited my budget and career plans. My experience with edYOUcate was great.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Darshan Gosai
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The counselors at edYOUcate were very helpful. They never rushed me into making a decision. They
+                compared universities and suggested the one that suited my budget and career plans. My experience with
+                edYOUcate was great.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Darshan Gosai
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I am a working professional and I needed a flexible degree program. EdYOUcate helped me find the online MBA. They handled all the documentation for me. Their support was excellent from start to finish. I am really happy with edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Vishnu Gilitwala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I am a working professional and I needed a flexible degree program. EdYOUcate helped me find the online
+                MBA. They handled all the documentation for me. Their support was excellent from start to finish. I am
+                really happy with edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Vishnu Gilitwala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The admission process was much easier than I expected. Every document was checked carefully by edYOUcate. Whenever I had a question they responded quickly. I am really satisfied with their service at edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Krish Bhanawala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The admission process was much easier than I expected. Every document was checked carefully by
+                edYOUcate. Whenever I had a question they responded quickly. I am really satisfied with their service at
+                edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Krish Bhanawala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I visited multiple consultants before choosing edYOUcate. They explained the difference between universities honestly. They did not try to sell me the expensive option. This built my trust in edYOUcate.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Dev Singapuri
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I visited multiple consultants before choosing edYOUcate. They explained the difference between
+                universities honestly. They did not try to sell me the expensive option. This built my trust in
+                edYOUcate.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Dev Singapuri
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I was not sure if an online degree would be recognized. The team at edYOUcate explained everything about UGC-DEB approval. They cleared all my doubts. The people at edYOUcate are very professional and supportive.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Mustafa Kanchwala
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I was not sure if an online degree would be recognized. The team at edYOUcate explained everything about
+                UGC-DEB approval. They cleared all my doubts. The people at edYOUcate are very professional and
+                supportive.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Mustafa Kanchwala
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  The entire admission process was completed smoothly by edYOUcate. They kept updating me at every step. I never had to worry about paperwork. I would definitely recommend edYOUcate to anyone looking for distance education.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Meet Dalal
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                The entire admission process was completed smoothly by edYOUcate. They kept updating me at every step. I
+                never had to worry about paperwork. I would definitely recommend edYOUcate to anyone looking for
+                distance education.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Meet Dalal
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I got genuine guidance from edYOUcate. They suggested the course according to my career goals. They did not push options. The counselors at edYOUcate are friendly and knowledgeable.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Vatsal Patel
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I got genuine guidance from edYOUcate. They suggested the course according to my career goals. They did
+                not push options. The counselors at edYOUcate are friendly and knowledgeable.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Vatsal Patel
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I wanted to continue my studies while managing my job. EdYOUcate helped me choose the university. Their guidance made everything simple for me. This was especially helpful since I was applying for the time.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Sneha Choksi
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I wanted to continue my studies while managing my job. EdYOUcate helped me choose the university. Their
+                guidance made everything simple for me. This was especially helpful since I was applying for the time.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Sneha Choksi
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I got service from edYOUcate. They responded quickly to my queries. Whenever I had doubts regarding fees, eligibility or admission they explained everything clearly. My experience with edYOUcate was smooth and hassle-free.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Riya Patel
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I got service from edYOUcate. They responded quickly to my queries. Whenever I had doubts regarding
+                fees, eligibility or admission they explained everything clearly. My experience with edYOUcate was
+                smooth and hassle-free.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Riya Patel
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
-              <div class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
-                <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
-                  I had almost given up on continuing my education because of my work schedule. Thanks to edYOUcate I found a degree that fits perfectly into my routine. I am really happy, with the support I got from edYOUcate throughout the process.
-                </p>
-                <div class="pt-4 flex items-center justify-between">
-                  <div>
-                    <h3 class="font-bold text-slate-900 leading-tight">
-                      Tisha Bariya
-                    </h3>
-                    <div class="text-amber-500 text-sm">★★★★★</div>
-                  </div>
-                  <div class="w-8 h-8 shrink-0 flex items-center justify-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="w-6 h-6 object-contain block" />
-                  </div>
+            </div>
+            <div
+              class="w-[320px] h-[260px] shrink-0 rounded-2xl bg-white border border-slate-200 p-5 shadow-sm flex flex-col">
+              <p class="text-slate-600 text-sm leading-relaxed flex-1 overflow-hidden mb-6">
+                I had almost given up on continuing my education because of my work schedule. Thanks to edYOUcate I
+                found a degree that fits perfectly into my routine. I am really happy, with the support I got from
+                edYOUcate throughout the process.
+              </p>
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-slate-900 leading-tight">
+                    Tisha Bariya
+                  </h3>
+                  <div class="text-amber-500 text-sm">★★★★★</div>
+                </div>
+                <div class="w-8 h-8 shrink-0 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"
+                    class="w-6 h-6 object-contain block" />
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1998,9 +2094,10 @@
                 class="inline-block bg-white/20 backdrop-blur-md text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full mb-4 relative z-10 border border-white/20 shadow-sm">
                 FREE COUNSELLING
               </div>
-              <h2 class="text-2xl font-black text-white leading-tight relative z-10 mb-2 font-poppins flex items-start gap-2">
+              <h2
+                class="text-2xl font-black text-white leading-tight relative z-10 mb-2 font-poppins flex items-start gap-2">
                 <i class="ti ti-school text-white/80 text-3xl"></i>
-                <span>Find your perfect<br>degree program</span>
+                <span>Find your perfect degree program</span>
               </h2>
               <p class="text-white/90 text-[13px] relative z-10 font-medium">Select your study mode — we show only
                 courses available for that path.</p>
@@ -2028,7 +2125,8 @@
               <div class="grid grid-cols-3 gap-2 mb-4">
                 <div onclick="selectMode('regular')" id="mode-regular"
                   class="cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full">
-                  <i class="ti ti-building-community text-gray-400 text-xl mb-1.5 transition-colors" id="icon-regular"></i>
+                  <i class="ti ti-building-community text-gray-400 text-xl mb-1.5 transition-colors"
+                    id="icon-regular"></i>
                   <div class="font-bold text-[13px] text-gray-800 leading-tight">Regular</div>
                   <div class="text-[9px] text-gray-400 mt-1 leading-tight">Campus classes</div>
                 </div>
@@ -2061,7 +2159,8 @@
               </select>
 
               <div id="form-subgroup-row" style="display:none;">
-                <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">Your stream / category</label>
+                <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">Your stream /
+                  category</label>
                 <select id="form-subgroup" onchange="onSubgroupChange()"
                   class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-800 font-semibold outline-none focus:border-[#c81e1e] focus:ring-2 focus:ring-red-100 transition-all mb-3 appearance-none cursor-pointer"
                   style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208l5%205%205-5%22%20fill%3D%22none%22%20stroke%3D%22%23a0aec0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2em;">
@@ -2070,7 +2169,8 @@
               </div>
 
               <div id="form-course-row" style="display:none;">
-                <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">Course you're interested in</label>
+                <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">Course you're
+                  interested in</label>
                 <select id="form-course"
                   class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-800 font-semibold outline-none focus:border-[#c81e1e] focus:ring-2 focus:ring-red-100 transition-all mb-5 appearance-none cursor-pointer"
                   style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208l5%205%205-5%22%20fill%3D%22none%22%20stroke%3D%22%23a0aec0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2em;">
@@ -2090,149 +2190,141 @@
                 spam, ever.</p>
             </div>
 
-            <div
-              class="flex gap-2 sm:gap-4 items-center justify-center py-3 bg-white border-t border-gray-100 text-[10px] font-semibold text-gray-500 uppercase tracking-wider relative z-20">
-              <span>UGC-DEB approved</span>
-              <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-              <span>5000+ students</span>
-              <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-              <span class="flex items-center gap-1">4.9 <span class="text-yellow-400 text-sm -mt-0.5">★</span> Google
-                rating</span>
-            </div>
+
 
             <script>
               const EP_DATA = {
-            regular: {
-                info: "Regular courses require physical attendance at a UGC-affiliated college. Best for students who prefer classroom learning and full campus life.",
-                levels: [
+                regular: {
+                  info: "Regular courses require physical attendance at a UGC-affiliated college. Best for students who prefer classroom learning and full campus life.",
+                  levels: [
                     {
-                        label: "After 10th — Diploma & Vocational", subgroups: [
-                            { label: "Diploma Courses", courses: ["Engineering Diploma", "Polytechnic", "ITI Trades", "Paramedical Diploma", "Hotel Management Diploma"] },
-                            { label: "Vocational Courses", courses: ["Computer Applications", "Retail Management", "Agriculture", "Fashion Designing", "Beauty & Wellness", "Healthcare"] }
-                        ]
+                      label: "After 10th — Diploma & Vocational", subgroups: [
+                        { label: "Diploma Courses", courses: ["Engineering Diploma", "Polytechnic", "ITI Trades", "Paramedical Diploma", "Hotel Management Diploma"] },
+                        { label: "Vocational Courses", courses: ["Computer Applications", "Retail Management", "Agriculture", "Fashion Designing", "Beauty & Wellness", "Healthcare"] }
+                      ]
                     },
                     {
-                        label: "After 12th — Science Stream", subgroups: [
-                            { label: "Engineering & Technology", courses: ["B.Tech / BE — Computer Science", "B.Tech / BE — Mechanical", "B.Tech / BE — Civil", "B.Tech / BE — Electrical", "B.Tech / BE — Electronics", "B.Tech / BE — AI & Data Science"] },
-                            { label: "Medical & Healthcare", courses: ["MBBS", "BDS — Dental", "BAMS — Ayurvedic", "BHMS — Homeopathic", "B.Sc Nursing", "B.Pharm — Pharmacy", "BPT — Physiotherapy", "BMLT — Medical Lab Technology"] },
-                            { label: "Science & Others", courses: ["B.Sc Biotechnology", "B.Sc Agriculture", "B.Arch — Architecture", "B.Sc Computer Science", "B.Sc Mathematics", "B.Sc Physics", "B.Sc Chemistry", "Aviation"] }
-                        ]
+                      label: "After 12th — Science Stream", subgroups: [
+                        { label: "Engineering & Technology", courses: ["B.Tech / BE — Computer Science", "B.Tech / BE — Mechanical", "B.Tech / BE — Civil", "B.Tech / BE — Electrical", "B.Tech / BE — Electronics", "B.Tech / BE — AI & Data Science"] },
+                        { label: "Medical & Healthcare", courses: ["MBBS", "BDS — Dental", "BAMS — Ayurvedic", "BHMS — Homeopathic", "B.Sc Nursing", "B.Pharm — Pharmacy", "BPT — Physiotherapy", "BMLT — Medical Lab Technology"] },
+                        { label: "Science & Others", courses: ["B.Sc Biotechnology", "B.Sc Agriculture", "B.Arch — Architecture", "B.Sc Computer Science", "B.Sc Mathematics", "B.Sc Physics", "B.Sc Chemistry", "Aviation"] }
+                      ]
                     },
                     {
-                        label: "After 12th — Commerce Stream", subgroups: [
-                            { label: "Commerce & Management", courses: ["B.Com General", "B.Com Accounting & Finance", "BBA — Business Administration", "BMS — Management Studies", "CA — Chartered Accountancy", "CS — Company Secretary", "CMA — Cost Accountant", "Economics (Hons.)", "Banking & Finance", "Digital Marketing"] }
-                        ]
+                      label: "After 12th — Commerce Stream", subgroups: [
+                        { label: "Commerce & Management", courses: ["B.Com General", "B.Com Accounting & Finance", "BBA — Business Administration", "BMS — Management Studies", "CA — Chartered Accountancy", "CS — Company Secretary", "CMA — Cost Accountant", "Economics (Hons.)", "Banking & Finance", "Digital Marketing"] }
+                      ]
                     },
                     {
-                        label: "After 12th — Arts / Humanities Stream", subgroups: [
-                            { label: "Arts & Humanities", courses: ["BA General", "BA English", "BA Hindi", "BA History", "BA Political Science", "BA Sociology", "BA Psychology", "BA Economics", "BJMC — Journalism & Mass Communication", "BSW — Social Work", "BA LLB — Law", "Hotel Management", "Fashion Designing", "Fine Arts", "Animation & Multimedia"] }
-                        ]
+                      label: "After 12th — Arts / Humanities Stream", subgroups: [
+                        { label: "Arts & Humanities", courses: ["BA General", "BA English", "BA Hindi", "BA History", "BA Political Science", "BA Sociology", "BA Psychology", "BA Economics", "BJMC — Journalism & Mass Communication", "BSW — Social Work", "BA LLB — Law", "Hotel Management", "Fashion Designing", "Fine Arts", "Animation & Multimedia"] }
+                      ]
                     },
                     {
-                        label: "Undergraduate (UG) — All Streams", subgroups: [
-                            { label: "Engineering & Technology", courses: ["B.Tech Computer Science", "B.Tech Artificial Intelligence", "B.Tech Data Science", "B.Tech Mechanical", "B.Tech Civil", "B.Tech Electrical", "B.Tech Electronics & Communication"] },
-                            { label: "Medical & Healthcare", courses: ["MBBS", "BDS", "BAMS", "BHMS", "B.Sc Nursing", "BPT — Physiotherapy", "B.Pharm", "BMLT — Medical Lab Technology"] },
-                            { label: "Commerce & Management", courses: ["B.Com", "BBA — Marketing", "BBA — Finance", "BBA — HR", "B.Com Accounting", "B.Com Banking & Insurance"] },
-                            { label: "Arts & Humanities", courses: ["BA Psychology", "BA Sociology", "BA History", "BA Political Science", "BA English", "BA Economics", "BA Public Administration"] },
-                            { label: "Computer & IT", courses: ["BCA", "B.Sc Computer Science", "B.Sc Cyber Security", "B.Sc Artificial Intelligence", "B.Sc Data Analytics", "B.Sc Cloud Computing"] },
-                            { label: "Law", courses: ["LLB (3 Year)", "BA LLB (5 Year)", "BBA LLB (5 Year)"] },
-                            { label: "Design & Creative", courses: ["B.Des Fashion Design", "B.Des Interior Design", "B.Des Graphic Design", "B.Des Animation", "B.Des UI/UX Design", "BFA — Fine Arts"] },
-                            { label: "Hospitality & Tourism", courses: ["BHM — Hotel Management", "B.Sc Travel & Tourism", "Culinary Arts", "Event Management"] },
-                            { label: "Agriculture", courses: ["B.Sc Agriculture", "B.Sc Horticulture", "B.Sc Forestry", "B.Tech Dairy Technology", "B.Sc Fisheries"] },
-                            { label: "Education", courses: ["B.Ed — Bachelor of Education", "Integrated BA B.Ed", "Integrated B.Sc B.Ed", "D.El.Ed — Elementary Education"] }
-                        ]
+                      label: "Undergraduate (UG) — All Streams", subgroups: [
+                        { label: "Engineering & Technology", courses: ["B.Tech Computer Science", "B.Tech Artificial Intelligence", "B.Tech Data Science", "B.Tech Mechanical", "B.Tech Civil", "B.Tech Electrical", "B.Tech Electronics & Communication"] },
+                        { label: "Medical & Healthcare", courses: ["MBBS", "BDS", "BAMS", "BHMS", "B.Sc Nursing", "BPT — Physiotherapy", "B.Pharm", "BMLT — Medical Lab Technology"] },
+                        { label: "Commerce & Management", courses: ["B.Com", "BBA — Marketing", "BBA — Finance", "BBA — HR", "B.Com Accounting", "B.Com Banking & Insurance"] },
+                        { label: "Arts & Humanities", courses: ["BA Psychology", "BA Sociology", "BA History", "BA Political Science", "BA English", "BA Economics", "BA Public Administration"] },
+                        { label: "Computer & IT", courses: ["BCA", "B.Sc Computer Science", "B.Sc Cyber Security", "B.Sc Artificial Intelligence", "B.Sc Data Analytics", "B.Sc Cloud Computing"] },
+                        { label: "Law", courses: ["LLB (3 Year)", "BA LLB (5 Year)", "BBA LLB (5 Year)"] },
+                        { label: "Design & Creative", courses: ["B.Des Fashion Design", "B.Des Interior Design", "B.Des Graphic Design", "B.Des Animation", "B.Des UI/UX Design", "BFA — Fine Arts"] },
+                        { label: "Hospitality & Tourism", courses: ["BHM — Hotel Management", "B.Sc Travel & Tourism", "Culinary Arts", "Event Management"] },
+                        { label: "Agriculture", courses: ["B.Sc Agriculture", "B.Sc Horticulture", "B.Sc Forestry", "B.Tech Dairy Technology", "B.Sc Fisheries"] },
+                        { label: "Education", courses: ["B.Ed — Bachelor of Education", "Integrated BA B.Ed", "Integrated B.Sc B.Ed", "D.El.Ed — Elementary Education"] }
+                      ]
                     },
                     {
-                        label: "Postgraduate (PG) / Master's", subgroups: [
-                            { label: "Engineering & Technology", courses: ["M.Tech Computer Science", "M.Tech Mechanical", "M.Tech Civil", "M.Tech Electrical", "ME — Master of Engineering", "M.Sc Computer Science", "M.Sc Data Science", "M.Sc Artificial Intelligence", "MCA"] },
-                            { label: "Management", courses: ["MBA General", "MBA Marketing", "MBA Finance", "MBA HR", "MBA Operations", "MBA Business Analytics", "PGDM", "Executive MBA", "Master in HRM", "Master in Marketing", "Master in Finance"] },
-                            { label: "Commerce", courses: ["M.Com", "Master of Finance", "Master of Accounting", "Master of Banking & Insurance", "Master of Economics"] },
-                            { label: "Science", courses: ["M.Sc Physics", "M.Sc Chemistry", "M.Sc Mathematics", "M.Sc Biology", "M.Sc Biotechnology", "M.Sc Microbiology", "M.Sc Environmental Science", "M.Sc Data Science"] },
-                            { label: "Arts & Humanities", courses: ["MA English", "MA Hindi", "MA History", "MA Political Science", "MA Sociology", "MA Psychology", "MA Economics", "MA Geography", "MA Public Administration"] },
-                            { label: "Computer & IT", courses: ["MCA", "M.Sc Information Technology", "M.Sc Cyber Security", "M.Sc Artificial Intelligence", "M.Sc Cloud Computing", "M.Sc Data Analytics"] },
-                            { label: "Education", courses: ["M.Ed", "MA Education", "M.P.Ed — Physical Education"] },
-                            { label: "Law", courses: ["LLM — Master of Laws"] },
-                            { label: "Medical & Healthcare", courses: ["MD", "MS — Master of Surgery", "MDS — Dental Surgery", "M.Pharm", "M.Sc Nursing", "MPH — Public Health", "MPT — Physiotherapy"] },
-                            { label: "Agriculture", courses: ["M.Sc Agriculture", "M.Tech Agricultural Engineering", "M.Sc Horticulture", "M.Sc Forestry", "M.Sc Agronomy"] },
-                            { label: "Design & Creative", courses: ["M.Des — Master of Design", "MFA — Master of Fine Arts", "MA Animation", "MA Graphic Design", "MA Interior Design"] },
-                            { label: "Hospitality & Tourism", courses: ["MHM — Hotel Management", "MBA Hospitality", "MA Tourism Management", "MA Event Management"] }
-                        ]
+                      label: "Postgraduate (PG) / Master's", subgroups: [
+                        { label: "Engineering & Technology", courses: ["M.Tech Computer Science", "M.Tech Mechanical", "M.Tech Civil", "M.Tech Electrical", "ME — Master of Engineering", "M.Sc Computer Science", "M.Sc Data Science", "M.Sc Artificial Intelligence", "MCA"] },
+                        { label: "Management", courses: ["MBA General", "MBA Marketing", "MBA Finance", "MBA HR", "MBA Operations", "MBA Business Analytics", "PGDM", "Executive MBA", "Master in HRM", "Master in Marketing", "Master in Finance"] },
+                        { label: "Commerce", courses: ["M.Com", "Master of Finance", "Master of Accounting", "Master of Banking & Insurance", "Master of Economics"] },
+                        { label: "Science", courses: ["M.Sc Physics", "M.Sc Chemistry", "M.Sc Mathematics", "M.Sc Biology", "M.Sc Biotechnology", "M.Sc Microbiology", "M.Sc Environmental Science", "M.Sc Data Science"] },
+                        { label: "Arts & Humanities", courses: ["MA English", "MA Hindi", "MA History", "MA Political Science", "MA Sociology", "MA Psychology", "MA Economics", "MA Geography", "MA Public Administration"] },
+                        { label: "Computer & IT", courses: ["MCA", "M.Sc Information Technology", "M.Sc Cyber Security", "M.Sc Artificial Intelligence", "M.Sc Cloud Computing", "M.Sc Data Analytics"] },
+                        { label: "Education", courses: ["M.Ed", "MA Education", "M.P.Ed — Physical Education"] },
+                        { label: "Law", courses: ["LLM — Master of Laws"] },
+                        { label: "Medical & Healthcare", courses: ["MD", "MS — Master of Surgery", "MDS — Dental Surgery", "M.Pharm", "M.Sc Nursing", "MPH — Public Health", "MPT — Physiotherapy"] },
+                        { label: "Agriculture", courses: ["M.Sc Agriculture", "M.Tech Agricultural Engineering", "M.Sc Horticulture", "M.Sc Forestry", "M.Sc Agronomy"] },
+                        { label: "Design & Creative", courses: ["M.Des — Master of Design", "MFA — Master of Fine Arts", "MA Animation", "MA Graphic Design", "MA Interior Design"] },
+                        { label: "Hospitality & Tourism", courses: ["MHM — Hotel Management", "MBA Hospitality", "MA Tourism Management", "MA Event Management"] }
+                      ]
                     }
-                ]
-            },
-            distance: {
-                info: "Distance education is UGC-DEB approved. Study via printed/digital material and appear for exams at a nearby centre. Ideal for working professionals and homemakers.",
-                levels: [
+                  ]
+                },
+                distance: {
+                  info: "Distance education is UGC-DEB approved. Study via printed/digital material and appear for exams at a nearby centre. Ideal for working professionals and homemakers.",
+                  levels: [
                     {
-                        label: "Undergraduate (UG) Programs", subgroups: [
-                            { label: "Arts & Humanities", courses: ["BA General", "BA English", "BA Hindi", "BA History", "BA Economics", "BA Political Science", "BA Sociology", "BA Psychology", "BA Public Administration", "BSW — Social Work"] },
-                            { label: "Commerce & Management", courses: ["B.Com General", "B.Com Accounting & Finance", "BBA — Business Administration"] },
-                            { label: "Computer & IT", courses: ["BCA — Computer Applications", "B.Sc Computer Science", "B.Sc Information Technology"] },
-                            { label: "Science & Others", courses: ["B.Sc Mathematics", "B.Sc General", "B.Lib — Library Science"] }
-                        ]
+                      label: "Undergraduate (UG) Programs", subgroups: [
+                        { label: "Arts & Humanities", courses: ["BA General", "BA English", "BA Hindi", "BA History", "BA Economics", "BA Political Science", "BA Sociology", "BA Psychology", "BA Public Administration", "BSW — Social Work"] },
+                        { label: "Commerce & Management", courses: ["B.Com General", "B.Com Accounting & Finance", "BBA — Business Administration"] },
+                        { label: "Computer & IT", courses: ["BCA — Computer Applications", "B.Sc Computer Science", "B.Sc Information Technology"] },
+                        { label: "Science & Others", courses: ["B.Sc Mathematics", "B.Sc General", "B.Lib — Library Science"] }
+                      ]
                     },
                     {
-                        label: "Postgraduate (PG) Programs", subgroups: [
-                            { label: "Arts & Humanities", courses: ["MA English", "MA Hindi", "MA History", "MA Economics", "MA Political Science", "MA Sociology", "MA Psychology", "MA Public Administration", "MA Sanskrit", "MSW — Social Work"] },
-                            { label: "Commerce & Management", courses: ["M.Com", "MBA (Distance)", "PGDBA — Business Administration", "PGDHRM — HR Management", "PGDMM — Marketing Management", "PGDFM — Financial Management"] },
-                            { label: "Computer & IT", courses: ["MCA (Distance)", "M.Sc Computer Science", "PGDCA — Computer Applications", "PGDIT — Information Technology"] },
-                            { label: "Education", courses: ["B.Ed — Bachelor of Education", "M.Ed — Master of Education", "D.El.Ed — Elementary Education"] },
-                            { label: "Library & Other", courses: ["M.Lib — Library Science", "PGDJMC — Journalism & Mass Communication", "PGDRD — Rural Development"] }
-                        ]
+                      label: "Postgraduate (PG) Programs", subgroups: [
+                        { label: "Arts & Humanities", courses: ["MA English", "MA Hindi", "MA History", "MA Economics", "MA Political Science", "MA Sociology", "MA Psychology", "MA Public Administration", "MA Sanskrit", "MSW — Social Work"] },
+                        { label: "Commerce & Management", courses: ["M.Com", "MBA (Distance)", "PGDBA — Business Administration", "PGDHRM — HR Management", "PGDMM — Marketing Management", "PGDFM — Financial Management"] },
+                        { label: "Computer & IT", courses: ["MCA (Distance)", "M.Sc Computer Science", "PGDCA — Computer Applications", "PGDIT — Information Technology"] },
+                        { label: "Education", courses: ["B.Ed — Bachelor of Education", "M.Ed — Master of Education", "D.El.Ed — Elementary Education"] },
+                        { label: "Library & Other", courses: ["M.Lib — Library Science", "PGDJMC — Journalism & Mass Communication", "PGDRD — Rural Development"] }
+                      ]
                     },
                     {
-                        label: "Diploma & Certificate Programs", subgroups: [
-                            { label: "Diploma Courses", courses: ["Diploma in Computer Application (DCA)", "Diploma in Business Management", "Diploma in Journalism", "Diploma in Yoga", "Diploma in Tourism Management"] },
-                            { label: "Certificate Courses", courses: ["Certificate in Computer Basics", "Certificate in Spoken English", "Certificate in Tourism Management", "Certificate in Yoga", "Certificate in Accounting (Tally)"] }
-                        ]
+                      label: "Diploma & Certificate Programs", subgroups: [
+                        { label: "Diploma Courses", courses: ["Diploma in Computer Application (DCA)", "Diploma in Business Management", "Diploma in Journalism", "Diploma in Yoga", "Diploma in Tourism Management"] },
+                        { label: "Certificate Courses", courses: ["Certificate in Computer Basics", "Certificate in Spoken English", "Certificate in Tourism Management", "Certificate in Yoga", "Certificate in Accounting (Tally)"] }
+                      ]
                     }
-                ]
-            },
-            online: {
-                info: "Online degrees are fully UGC-DEB approved. Attend live + recorded lectures, submit assignments digitally, and give exams online or at a nearby centre.",
-                levels: [
+                  ]
+                },
+                online: {
+                  info: "Online degrees are fully UGC-DEB approved. Attend live + recorded lectures, submit assignments digitally, and give exams online or at a nearby centre.",
+                  levels: [
                     {
-                        label: "MBA Specialisations", subgroups: [
-                            { label: "MBA Programs", courses: ["MBA General Management", "MBA Marketing", "MBA Finance", "MBA Human Resource Management", "MBA Operations Management", "MBA Business Analytics", "MBA Digital Marketing", "MBA Healthcare Management", "MBA Logistics & Supply Chain", "MBA Retail Management", "MBA International Business", "MBA Banking & Finance", "MBA IT Management", "MBA Hotel & Hospitality", "Executive MBA"] }
-                        ]
+                      label: "MBA Specialisations", subgroups: [
+                        { label: "MBA Programs", courses: ["MBA General Management", "MBA Marketing", "MBA Finance", "MBA Human Resource Management", "MBA Operations Management", "MBA Business Analytics", "MBA Digital Marketing", "MBA Healthcare Management", "MBA Logistics & Supply Chain", "MBA Retail Management", "MBA International Business", "MBA Banking & Finance", "MBA IT Management", "MBA Hotel & Hospitality", "Executive MBA"] }
+                      ]
                     },
                     {
-                        label: "BBA Programs", subgroups: [
-                            { label: "BBA Specialisations", courses: ["BBA General", "BBA Marketing", "BBA Finance", "BBA HR", "BBA Digital Marketing", "BBA Entrepreneurship", "BBA Aviation & Hospitality"] }
-                        ]
+                      label: "BBA Programs", subgroups: [
+                        { label: "BBA Specialisations", courses: ["BBA General", "BBA Marketing", "BBA Finance", "BBA HR", "BBA Digital Marketing", "BBA Entrepreneurship", "BBA Aviation & Hospitality"] }
+                      ]
                     },
                     {
-                        label: "Computer & IT Programs", subgroups: [
-                            { label: "Postgraduate — Tech", courses: ["MCA", "M.Sc Computer Science", "M.Sc Data Science", "M.Sc Artificial Intelligence", "M.Sc Cyber Security", "M.Sc Information Technology", "M.Sc Cloud Computing"] },
-                            { label: "Undergraduate — Tech", courses: ["BCA", "B.Sc Computer Science", "B.Sc Data Science", "B.Sc Information Technology", "B.Sc Animation & VFX", "B.Sc Cyber Security"] }
-                        ]
+                      label: "Computer & IT Programs", subgroups: [
+                        { label: "Postgraduate — Tech", courses: ["MCA", "M.Sc Computer Science", "M.Sc Data Science", "M.Sc Artificial Intelligence", "M.Sc Cyber Security", "M.Sc Information Technology", "M.Sc Cloud Computing"] },
+                        { label: "Undergraduate — Tech", courses: ["BCA", "B.Sc Computer Science", "B.Sc Data Science", "B.Sc Information Technology", "B.Sc Animation & VFX", "B.Sc Cyber Security"] }
+                      ]
                     },
                     {
-                        label: "Commerce Programs", subgroups: [
-                            { label: "Commerce & Accounts", courses: ["B.Com General", "B.Com Accounting & Finance", "B.Com Banking & Insurance", "B.Com Taxation", "M.Com General", "M.Com Accounting & Finance"] }
-                        ]
+                      label: "Commerce Programs", subgroups: [
+                        { label: "Commerce & Accounts", courses: ["B.Com General", "B.Com Accounting & Finance", "B.Com Banking & Insurance", "B.Com Taxation", "M.Com General", "M.Com Accounting & Finance"] }
+                      ]
                     },
                     {
-                        label: "Arts & Humanities", subgroups: [
-                            { label: "Undergraduate Arts", courses: ["BA Liberal Arts", "BA English", "BA Journalism & Mass Communication", "BA Psychology", "BA Economics"] },
-                            { label: "Postgraduate Arts", courses: ["MA English", "MA Economics", "MA Psychology", "MA Journalism", "MA Public Administration", "MA Sociology"] }
-                        ]
+                      label: "Arts & Humanities", subgroups: [
+                        { label: "Undergraduate Arts", courses: ["BA Liberal Arts", "BA English", "BA Journalism & Mass Communication", "BA Psychology", "BA Economics"] },
+                        { label: "Postgraduate Arts", courses: ["MA English", "MA Economics", "MA Psychology", "MA Journalism", "MA Public Administration", "MA Sociology"] }
+                      ]
                     },
                     {
-                        label: "Diploma & Certificate (Online)", subgroups: [
-                            { label: "PG Diplomas", courses: ["PGDCA — Computer Applications", "PGDBA — Business Administration", "PGDHRM — HR Management", "PGDMM — Marketing"] },
-                            { label: "Certificate Courses", courses: ["Certificate in Digital Marketing", "Certificate in Data Analytics", "Certificate in Cyber Security", "Certificate in Python Programming", "Certificate in Graphic Design", "Certificate in Tally & Accounting"] }
-                        ]
+                      label: "Diploma & Certificate (Online)", subgroups: [
+                        { label: "PG Diplomas", courses: ["PGDCA — Computer Applications", "PGDBA — Business Administration", "PGDHRM — HR Management", "PGDMM — Marketing"] },
+                        { label: "Certificate Courses", courses: ["Certificate in Digital Marketing", "Certificate in Data Analytics", "Certificate in Cyber Security", "Certificate in Python Programming", "Certificate in Graphic Design", "Certificate in Tally & Accounting"] }
+                      ]
                     }
-                ]
-            }
-        };
+                  ]
+                }
+              };
 
               let selectedMode = 'distance';
 
               function selectMode(mode) {
                 selectedMode = mode;
-                
+
                 // Reset all
                 document.getElementById('mode-regular').className = 'cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full';
                 document.getElementById('mode-regular').children[1].className = 'font-bold text-[13px] text-gray-800 leading-tight';
@@ -2510,8 +2602,13 @@
               </a>
             </li>
             <li>
-              <a href="#about" class="hover:text-white hover:translate-x-1 transition-all inline-block">
-                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> About Us
+              <a href="#hallmarks" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Why Us
+              </a>
+            </li>
+            <li>
+              <a href="#who-we-help" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Who We Help
               </a>
             </li>
             <li>
@@ -2520,13 +2617,28 @@
               </a>
             </li>
             <li>
+              <a href="#process" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Process
+              </a>
+            </li>
+            <li>
               <a href="#universities" class="hover:text-white hover:translate-x-1 transition-all inline-block">
                 <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Universities
               </a>
             </li>
             <li>
+              <a href="#reviews" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Reviews
+              </a>
+            </li>
+            <li>
               <a href="#faq" class="hover:text-white hover:translate-x-1 transition-all inline-block">
                 <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i> Contact
               </a>
             </li>
           </ul>

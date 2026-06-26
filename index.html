@@ -122,12 +122,12 @@
         <a href="#contact">Contact</a>
       </div>
 
-      <!-- Desktop CTA -->
-      <div class="hidden lg:block shrink-0">
-        <button
-          class="bg-[#E50000] text-white text-sm px-6 py-2.5 rounded-xl font-semibold shadow-md hover:bg-[#C70000] transition-colors">
-          Book Free Counseling ↗
-        </button>
+      <!-- Contact Info -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#faq-form"
+          class="bg-brand-red text-white px-5 py-2.5 rounded-full font-bold hover:bg-brand-redHover transition-colors flex items-center gap-2 text-sm shadow-md shadow-brand-red/20">
+          Apply For Counselling ↗
+        </a>
       </div>
 
       <!-- Mobile Hamburger -->
@@ -242,8 +242,8 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
-            <a href="https://wa.me/918866230077" target="_blank"
-              class="bg-white/5 backdrop-blur-sm border border-white/20 text-white hover:bg-white/10 hover:scale-105 px-8 py-4 rounded-full font-bold text-[15px] transition-all duration-300 flex items-center justify-center gap-2">
+            <a href="#faq-form"
+              class="bg-[#c81e1e] hover:bg-[#991b1b] text-white hover:scale-105 px-8 py-4 rounded-full font-bold text-[15px] transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-red-900/30">
               <i class="ti ti-brand-whatsapp text-xl"></i> Ask Us Anything on WhatsApp
             </a>
           </div>
@@ -723,10 +723,7 @@
             Advance your career with a recognized PG degree. Study after work. Get promoted faster without losing your
             salary.
           </p>
-          <div
-            class="mt-auto inline-flex items-center gap-2 text-sm font-bold bg-white/15 backdrop-blur-md px-5 py-3 rounded-xl cursor-pointer hover:bg-white/25 transition-colors w-fit">
-            View PG programs <i class="ti ti-arrow-right"></i>
-          </div>
+          <!-- removed view button -->
         </div>
 
         <!-- UNDERGRADUATE (Wide Top Right) -->
@@ -754,10 +751,7 @@
                 class="bg-[rgba(229,0,0,0.08)] text-brand-red text-[11px] font-bold px-3 py-1.5 rounded-full">BSc</span>
             </div>
           </div>
-          <div
-            class="mt-4 sm:mt-0 sm:self-end text-sm text-brand-red font-bold cursor-pointer hover:text-brand-redHover transition-colors flex items-center gap-1">
-            View UG programs <i class="ti ti-arrow-right"></i>
-          </div>
+          <!-- removed view button -->
         </div>
 
         <!-- DIPLOMA & CERTIFICATE (Wide Bottom Right) -->
@@ -781,10 +775,7 @@
                 class="bg-[rgba(229,0,0,0.08)] text-brand-red text-[11px] font-bold px-3 py-1.5 rounded-full">Management</span>
             </div>
           </div>
-          <div
-            class="mt-4 sm:mt-0 sm:self-end text-sm text-brand-red font-bold cursor-pointer hover:text-brand-redHover transition-colors flex items-center gap-1">
-            View courses <i class="ti ti-arrow-right"></i>
-          </div>
+          <!-- removed view button -->
         </div>
 
       </div>
@@ -1606,95 +1597,152 @@
         </div>
 
         <div class="w-full lg:w-[480px] shrink-0 sticky top-32 self-start">
-          <div id="contact"
-            class="w-full bg-white rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.14),0_0_0_1px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col">
+          <div id="faq-form"
+            class="w-full bg-white rounded-[24px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.2)] flex flex-col relative">
 
             <!-- Red top banner -->
-            <div class="bg-gradient-to-br from-brand-red to-red-800 p-8 sm:p-10 relative overflow-hidden text-left">
-              <!-- background circles -->
-              <div class="absolute -top-8 -right-8 w-40 h-40 bg-white/10 rounded-full"></div>
-              <div class="absolute -bottom-12 -left-5 w-48 h-48 bg-white/5 rounded-full"></div>
+            <div class="bg-[#c81e1e] p-6 sm:p-8 relative overflow-hidden text-left border-b border-red-900/50">
+              <div class="absolute -top-6 -right-6 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
 
-              <p class="text-[11px] font-bold tracking-[0.15em] uppercase text-white/70 mb-3 relative z-10">Free · No
-                Obligation</p>
-              <h2 class="text-3xl font-black text-white leading-[1.18] relative z-10">Talk to a real<br>counselor today
-              </h2>
-            </div>
-
-            <!-- Quick stats -->
-            <div class="flex bg-red-50 border-b border-red-100">
-              <div class="flex-1 py-4 text-center border-r border-red-100">
-                <span class="text-xl font-extrabold text-brand-red leading-none block">24hr</span>
-                <span class="text-[10px] font-medium text-gray-400 block mt-1 uppercase tracking-widest">Call
-                  Back</span>
+              <div
+                class="inline-block bg-white/20 backdrop-blur-md text-white text-[10px] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full mb-4 relative z-10 border border-white/20 shadow-sm">
+                FREE COUNSELLING
               </div>
-              <div class="flex-1 py-4 text-center border-r border-red-100">
-                <span class="text-xl font-extrabold text-brand-red leading-none block">100%</span>
-                <span class="text-[10px] font-medium text-gray-400 block mt-1 uppercase tracking-widest">Free</span>
-              </div>
-              <div class="flex-1 py-4 text-center">
-                <span class="text-xl font-extrabold text-brand-red leading-none block">5,000+</span>
-                <span class="text-[10px] font-medium text-gray-400 block mt-1 uppercase tracking-widest">Guided</span>
-              </div>
+              <h2 class="text-2xl font-black text-white leading-tight relative z-10 mb-2 font-poppins">Find your
+                perfect<br>degree program</h2>
+              <p class="text-white/90 text-[13px] relative z-10 font-medium">Select your study mode — we show only
+                courses available for that path.</p>
             </div>
 
             <!-- Form -->
-            <div class="p-8 sm:p-10 text-left">
-              <p class="text-[14px] text-gray-500 leading-[1.6] mb-6">
-                Share your number and get a <strong class="text-gray-900 font-semibold">personalised degree
-                  plan</strong> — no spam, no pushy sales calls.
-              </p>
-
-              <p class="text-[11px] font-bold tracking-[0.08em] uppercase text-gray-700 mb-2">WhatsApp Number</p>
-              <div class="flex gap-2 mb-1">
-                <div
-                  class="bg-gray-100 border-2 border-gray-200 rounded-xl px-4 text-sm font-semibold text-gray-700 font-poppins flex items-center whitespace-nowrap gap-1 cursor-default shrink-0">
-                  🇮🇳 +91
+            <div class="p-6 sm:p-8 text-left bg-white relative z-20">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div>
+                  <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-2">Your
+                    Name</label>
+                  <input id="form-name" type="text" placeholder="Rahul Shah"
+                    class="w-full bg-transparent border-b-2 border-gray-200 px-1 py-2 text-sm text-gray-900 font-semibold outline-none focus:border-[#c81e1e] transition-colors placeholder:text-gray-300 placeholder:font-normal" />
                 </div>
-                <input id="wa-num" type="tel" placeholder="98765 43210"
-                  class="flex-1 bg-gray-50 border-2 border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-900 font-poppins outline-none transition-all focus:border-brand-red focus:bg-white focus:ring-4 focus:ring-brand-red/10 placeholder:text-gray-400 w-full" />
+                <div>
+                  <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-2">WhatsApp
+                    Number</label>
+                  <input id="form-wa" type="tel" placeholder="+91 98765 43210"
+                    class="w-full bg-transparent border-b-2 border-gray-200 px-1 py-2 text-sm text-gray-900 font-semibold outline-none focus:border-[#c81e1e] transition-colors placeholder:text-gray-300 placeholder:font-normal" />
+                </div>
               </div>
-              <p id="wa-error" class="hidden text-left text-[11px] text-brand-red font-semibold mb-3">Please enter a
-                valid 10-digit phone number.</p>
 
-              <button onclick="submitCtaForm()"
-                class="w-full mt-2 py-4 bg-gray-900 text-white text-[15px] font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-brand-red hover:-translate-y-[1px] shadow-lg shadow-transparent hover:shadow-brand-red/30 transition-all font-poppins">
-                Get My Free Counselling
-                <span
-                  class="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center text-xs transition-colors">↗</span>
+              <!-- Study Mode -->
+              <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">How do you want
+                to study?</label>
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div onclick="selectMode('regular')" id="mode-regular"
+                  class="cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full">
+                  <div class="font-bold text-[13px] text-gray-800 leading-tight">Regular</div>
+                  <div class="text-[9px] text-gray-400 mt-1 leading-tight">Campus classes</div>
+                </div>
+                <div onclick="selectMode('distance')" id="mode-distance"
+                  class="cursor-pointer border border-[#c81e1e] bg-red-50 rounded-xl p-3 text-center transition-all shadow-[0_0_0_1px_#c81e1e] flex flex-col items-center justify-center h-full">
+                  <div class="font-bold text-[13px] text-gray-900 leading-tight">Distance</div>
+                  <div class="text-[9px] text-gray-500 mt-1 leading-tight">Study from home</div>
+                </div>
+                <div onclick="selectMode('online')" id="mode-online"
+                  class="cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full">
+                  <div class="font-bold text-[13px] text-gray-800 leading-tight">Online</div>
+                  <div class="text-[9px] text-gray-400 mt-1 leading-tight">Live + recorded</div>
+                </div>
+              </div>
+
+              <div
+                class="bg-orange-50/50 border border-orange-100 rounded-xl p-4 mb-6 text-[11px] text-orange-800 leading-relaxed font-medium">
+                Distance education is UGC-DEB approved. Study via printed/digital material and appear for exams at a
+                nearby centre. Ideal for working professionals and homemakers.
+              </div>
+
+              <label class="block text-[10px] font-bold tracking-[0.08em] uppercase text-gray-600 mb-3">Education Level
+                / Stream</label>
+              <select id="form-level"
+                class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-sm text-gray-800 font-semibold outline-none focus:border-[#c81e1e] focus:ring-2 focus:ring-red-100 transition-all mb-5 appearance-none cursor-pointer"
+                style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%208l5%205%205-5%22%20fill%3D%22none%22%20stroke%3D%22%23a0aec0%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.2em;">
+                <option value="" disabled selected hidden>Select your education level...</option>
+                <option value="Undergraduate (UG) Programs">Undergraduate (UG) Programs</option>
+                <option value="Postgraduate (PG) Programs">Postgraduate (PG) Programs</option>
+                <option value="Diploma & Certificate Programs">Diploma & Certificate Programs</option>
+              </select>
+
+              <p id="form-error"
+                class="hidden text-center text-[12px] text-[#c81e1e] font-bold mb-4 bg-red-50 py-2 rounded-lg border border-red-100">
+                Please fill out all fields.</p>
+
+              <button onclick="submitNewCtaForm()"
+                class="w-full py-4 bg-[#c81e1e] text-white text-[15px] font-bold rounded-xl flex items-center justify-center hover:bg-red-800 transition-all shadow-lg shadow-red-900/20 mb-4 font-poppins">
+                Get my free counselling
               </button>
-
-              <script>
-                function submitCtaForm() {
-                  const numInput = document.getElementById('wa-num');
-                  const errorMsg = document.getElementById('wa-error');
-                  const num = numInput.value.replace(/\D/g, ''); // Extract only digits
-
-                  if (num.length !== 10) {
-                    errorMsg.classList.remove('hidden');
-                    numInput.classList.add('border-brand-red', 'bg-red-50');
-                    return;
-                  }
-
-                  // Valid number
-                  errorMsg.classList.add('hidden');
-                  numInput.classList.remove('border-brand-red', 'bg-red-50');
-                  window.open('https://wa.me/918866230077?text=Hi,%20I%20would%20like%20to%20request%20a%20free%20counselling%20call.%20My%20number%20is:%20' + num, '_blank');
-                }
-              </script>
-
-              <div class="flex gap-1.5 mt-5 flex-wrap justify-center">
-                <span
-                  class="flex items-center gap-1 bg-gray-100 rounded-lg px-2.5 py-1 text-[11px] font-medium text-gray-500"><span
-                    class="text-[12px]">🔒</span> Number never shared</span>
-                <span
-                  class="flex items-center gap-1 bg-gray-100 rounded-lg px-2.5 py-1 text-[11px] font-medium text-gray-500"><span
-                    class="text-[12px]">✅</span> UGC-DEB verified</span>
-                <span
-                  class="flex items-center gap-1 bg-gray-100 rounded-lg px-2.5 py-1 text-[11px] font-medium text-gray-500"><span
-                    class="text-[12px]">📞</span> Human counselor</span>
-              </div>
+              <p class="text-center text-[10px] text-gray-400 font-medium tracking-wide">Your number is never shared. No
+                spam, ever.</p>
             </div>
+
+            <div
+              class="flex gap-2 sm:gap-4 items-center justify-center py-3 bg-white border-t border-gray-100 text-[10px] font-semibold text-gray-500 uppercase tracking-wider relative z-20">
+              <span>UGC-DEB approved</span>
+              <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+              <span>5000+ students</span>
+              <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+              <span class="flex items-center gap-1">4.9 <span class="text-yellow-400 text-sm -mt-0.5">★</span> Google
+                rating</span>
+            </div>
+
+            <script>
+              let selectedMode = 'Distance'; // default
+
+              function selectMode(mode) {
+                // Reset all
+                document.getElementById('mode-regular').className = 'cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full';
+                document.getElementById('mode-regular').children[0].className = 'font-bold text-[13px] text-gray-800 leading-tight';
+                document.getElementById('mode-regular').children[1].className = 'text-[9px] text-gray-400 mt-1 leading-tight';
+
+                document.getElementById('mode-distance').className = 'cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full';
+                document.getElementById('mode-distance').children[0].className = 'font-bold text-[13px] text-gray-800 leading-tight';
+                document.getElementById('mode-distance').children[1].className = 'text-[9px] text-gray-400 mt-1 leading-tight';
+
+                document.getElementById('mode-online').className = 'cursor-pointer border border-gray-100 rounded-xl p-3 text-center transition-all hover:bg-gray-50 flex flex-col items-center justify-center h-full';
+                document.getElementById('mode-online').children[0].className = 'font-bold text-[13px] text-gray-800 leading-tight';
+                document.getElementById('mode-online').children[1].className = 'text-[9px] text-gray-400 mt-1 leading-tight';
+
+                // Activate selected
+                const target = document.getElementById('mode-' + mode);
+                target.className = 'cursor-pointer border border-[#c81e1e] bg-red-50 rounded-xl p-3 text-center transition-all shadow-[0_0_0_1px_#c81e1e] flex flex-col items-center justify-center h-full';
+                target.children[0].className = 'font-bold text-[13px] text-gray-900 leading-tight';
+                target.children[1].className = 'text-[9px] text-gray-500 mt-1 leading-tight';
+
+                selectedMode = mode.charAt(0).toUpperCase() + mode.slice(1);
+              }
+
+              function submitNewCtaForm() {
+                const nameInput = document.getElementById('form-name');
+                const waInput = document.getElementById('form-wa');
+                const levelSelect = document.getElementById('form-level');
+                const errorMsg = document.getElementById('form-error');
+
+                const num = waInput.value.replace(/\D/g, '');
+
+                if (!nameInput.value.trim() || num.length < 10 || !levelSelect.value) {
+                  errorMsg.classList.remove('hidden');
+                  if (!nameInput.value.trim()) nameInput.classList.add('border-[#c81e1e]');
+                  if (num.length < 10) waInput.classList.add('border-[#c81e1e]');
+                  if (!levelSelect.value) levelSelect.classList.add('border-[#c81e1e]');
+                  return;
+                }
+
+                errorMsg.classList.add('hidden');
+                nameInput.classList.remove('border-[#c81e1e]');
+                waInput.classList.remove('border-[#c81e1e]');
+                levelSelect.classList.remove('border-[#c81e1e]');
+
+                const message = 'Hi, I am ' + nameInput.value + '. I would like to request a free counselling call.\nStudy Mode: ' + selectedMode + '\nEducation Level: ' + levelSelect.value + '\nPhone: ' + waInput.value;
+
+                window.open('https://wa.me/918866230077?text=' + encodeURIComponent(message), '_blank');
+              }
+            </script>
           </div>
         </div>
 
@@ -1814,6 +1862,9 @@
         <!-- COLUMN 1: Brand & Socials -->
         <div class="lg:col-span-3 flex flex-col items-center md:items-start text-center md:text-left gap-6">
           <div class="flex items-center justify-center md:justify-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-red flex items-center justify-center text-white shrink-0">
+              <i class="ti ti-school text-xl"></i>
+            </div>
             <!-- Replaced Image Logo with Stylized Text -->
             <span class="text-3xl font-extrabold font-poppins text-white tracking-wide">
               ed<span class="">YOU</span>cate

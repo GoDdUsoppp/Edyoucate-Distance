@@ -35,3 +35,25 @@ cta-sample.html
 hero-minibar2.html
 SOp for edyoucate.txt
 SOP.txt
+# Dependencies
+node_modules/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Tailwind cache
+.tailwindcss-cache
+
+# npm debug
+npm-debug.log*

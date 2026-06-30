@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paste your custom CSS below this line */
+.menu-gradient-span a {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.menu-gradient-span a:nth-child(1) {
+  background: #171731;
+}
+.menu-gradient-span a:nth-child(2) {
+  background: linear-gradient(90deg, #171731, #1b162f);
+}
+.menu-gradient-span a:nth-child(3) {
+  background: linear-gradient(90deg, #1b162f, #331226);
+}
+.menu-gradient-span a:nth-child(4) {
+  background: linear-gradient(90deg, #331226, #4b0e1d);
+}
+.menu-gradient-span a:nth-child(5) {
+  background: linear-gradient(90deg, #4b0e1d, #630a14);
+}
+.menu-gradient-span a:nth-child(6) {
+  background: linear-gradient(90deg, #630a14, #7b050b);
+}
+.menu-gradient-span a:nth-child(7) {
+  background: linear-gradient(90deg, #7b050b, #920103);
+}
+.menu-gradient-span a:nth-child(8) {
+  background: linear-gradient(90deg, #920103, #990000);
+}
+.menu-gradient-span a:nth-child(9) {
+  background: #990000;
+}
+
+.menu-gradient-span a:hover {
+  background: #990000;
+  transform: translateY(-1px);
+}
+
+.bg-dots-texture {
+  background-image: radial-gradient(
+    rgba(229, 0, 0, 0.35) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 24px 24px;
+}
+
+/* Thicker Primary Red Dots for Beige Background */
+.bg-dots-red-thick {
+  background-image: radial-gradient(
+    rgba(229, 0, 0, 0.2) 2.5px,
+    transparent 2.5px
+  );
+  background-size: 24px 24px;
+}
+
+.odo-wrap {
+  @apply inline-flex overflow-hidden h-[1.1em] leading-[1.1em] align-bottom;
+}
+.odo-col {
+  @apply flex flex-col transition-transform ease-[cubic-bezier(0.16,1,0.3,1)];
+}
+.odo-digit {
+  @apply h-[1.1em] flex items-center justify-center;
+}

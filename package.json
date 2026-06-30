@@ -1,0 +1,30 @@
+{
+  "name": "edyoucate-distance",
+  "version": "1.0.0",
+  "description": "The edYOUcate website is a modern, responsive landing page developed for **edYOUcate**, an online and distance education consultancy. The website is designed to provide prospective students with information about online degree programs, showcase partner universities, and generate admission enquiries through an intuitive user experience.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoDdUsoppp/Edyoucate-Distance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GoDdUsoppp/Edyoucate-Distance/issues"
+  },
+  "homepage": "https://github.com/GoDdUsoppp/Edyoucate-Distance#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@tabler/icons-webfont": "^3.44.0"
+  }
+}

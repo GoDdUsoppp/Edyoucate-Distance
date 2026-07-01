@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (statsSection) observer.observe(statsSection);
 });
 document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
       if (typeof particlesJS !== "undefined") {
         particlesJS("particles-js", {
           "particles": {
@@ -92,4 +93,5 @@ document.addEventListener("DOMContentLoaded", () => {
           "retina_detect": true
         });
       }
+      }, 500);
     });

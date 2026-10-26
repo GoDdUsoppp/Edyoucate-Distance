@@ -29,6 +29,78 @@
   <noscript>
     <link rel="stylesheet" href="css/tabler-icons.min.css" />
   </noscript>
+
+  <!-- Google Fonts (Outfit & Inter for Blog Section) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: "#171731",
+              darker: "#232347",
+              red: "#E50000",
+              redHover: "#C70000",
+              light: "#F4F5F8",
+              text: "#1A1A1A",
+              muted: "#6B7280",
+              blue: "#0f172a",
+              gold: "#f59e0b",
+              green: "#10b981",
+            },
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            poppins: ["Poppins", "sans-serif"],
+            heading: ["Outfit", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .menu-gradient-span a,
+    .menu-gradient-span a:hover {
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      display: inline-block;
+    }
+    .menu-gradient-span a:nth-child(7) {
+      background: linear-gradient(90deg, #7b050b, #860307) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+    .menu-gradient-span a:nth-child(8) {
+      background: linear-gradient(90deg, #860307, #920103) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+    .menu-gradient-span a:nth-child(9) {
+      background: linear-gradient(90deg, #920103, #990000) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+    .menu-gradient-span a:nth-child(10) {
+      background: #990000 !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+  </style>
 </head>
 
 <body class="text-brand-text antialiased selection:bg-brand-red/20 selection:text-brand-red bg-brand-light">
@@ -57,6 +129,7 @@
         <a href="#programs">Programs</a>
         <a href="#process">Process</a>
         <a href="#universities">Universities</a>
+        <a href="#blogs">Blogs</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -93,6 +166,7 @@
           <a href="#programs" class="hover:text-[#E50000]">Programs</a>
           <a href="#process" class="hover:text-[#E50000]">Process</a>
           <a href="#universities" class="hover:text-[#E50000]">Universities</a>
+          <a href="#blogs" class="hover:text-[#E50000]">Blogs</a>
           <a href="#reviews" class="hover:text-[#E50000]">Reviews</a>
           <a href="#faq" class="hover:text-[#E50000]">FAQ</a>
           <a href="#contact" class="hover:text-[#E50000]">Contact</a>
@@ -1497,6 +1571,545 @@
     </div>
   </section>
 
+  <!-- ============================================ -->
+  <!-- EDYOUCATE BLOG & STORIES SECTION (DISTANCE)  -->
+  <!-- ============================================ -->
+  <section
+    id="blogs"
+    class="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 border-b border-slate-200 relative overflow-hidden"
+  >
+    <!-- Background decorative glow -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div
+          class="inline-flex items-center gap-2 bg-brand-red/10 border border-brand-red/20 px-4 py-1.5 rounded-full text-brand-red font-semibold text-xs md:text-sm uppercase tracking-wider mb-4 shadow-sm"
+        >
+          <i class="fa-solid fa-newspaper text-brand-red"></i>
+          The edYOUcate Blog
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+          Latest Stories & Guides from
+          <span class="bg-gradient-to-r from-brand-red via-red-600 to-amber-600 bg-clip-text text-transparent">
+            blog.edyoucate
+          </span>
+        </h2>
+        <p class="text-slate-600 mt-4 text-base md:text-lg leading-relaxed">
+          Curious minds, fresh perspectives, and comprehensive guides on distance education, online degrees, UGC-DEB recognition, and career advancement.
+        </p>
+
+        <div class="flex items-center justify-center gap-2 mt-4">
+          <span id="blogSyncStatus" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Auto-synced with blog.edyoucate
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Story Banner (Displays the Most Recent Article) -->
+      <div class="mb-8 lg:mb-10 featured-blog-banner" data-category="distance-learning">
+        <a
+          id="featuredBlogLink"
+          href="https://blog.edyoucate.in/distance-education-in-surat.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-white rounded-2xl lg:rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl lg:shadow-md lg:hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1.5 lg:hover:-translate-y-1 group"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <div class="lg:col-span-7 relative h-48 sm:h-52 lg:h-auto overflow-hidden bg-slate-100 border-b border-slate-100 lg:border-b-0">
+              <img
+                id="featuredBlogImg"
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80';"
+                alt="Distance Education in Surat: A Student's Guide"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3 lg:top-4 lg:left-4 z-10">
+                <span id="featuredBlogBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white shadow-md">
+                  <i class="fa-solid fa-star text-[10px]"></i>
+                  LATEST / DISTANCE LEARNING
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3 lg:hidden">
+                <span id="featuredBlogReadTimeBadge" class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                  13 min read
+                </span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 p-6 lg:p-8 xl:p-10 flex flex-col justify-between">
+              <div>
+                <div id="featuredBlogMeta" class="flex items-center gap-2 text-xs font-medium lg:font-semibold text-slate-400 mb-2 lg:mb-3 uppercase tracking-wider">
+                  <span>OCT 18, 2026</span>
+                  <span class="hidden lg:inline">•</span>
+                  <span class="hidden lg:inline">13 MIN READ</span>
+                  <span>•</span>
+                  <span>BY EDYOUCATE EDITORIAL</span>
+                </div>
+                <h3 id="featuredBlogTitle" class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold font-heading text-slate-900 group-hover:text-brand-red transition-colors duration-200 leading-snug mb-3">
+                  Distance Education in Surat: A Student's Guide.
+                </h3>
+                <p id="featuredBlogExcerpt" class="text-slate-600 text-sm lg:text-base leading-relaxed mb-4 lg:mb-6 line-clamp-3">
+                  Explore distance education in Surat: course choices, eligibility, ODL vs online learning, UGC-DEB recognition checks, fees and admission steps.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-brand-red font-semibold text-sm">
+                <span class="inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span>Read on Blog</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </span>
+                <span class="text-xs text-slate-400 font-medium">blog.edyoucate.in</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Blog Cards Grid (3 in line, showing the remaining recent articles without duplicating the main card) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="blogCardsGrid">
+        <!-- CARD 1: Online Degree Courses -->
+        <article
+          class="blog-card bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5 group"
+          data-category="distance-learning"
+        >
+          <a
+            href="https://blog.edyoucate.in/online-degree-courses-in-surat.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col h-full"
+          >
+            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img
+                src="https://blog.edyoucate.in/NIOS%20Photos/Online%20degree%20courses.png"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Online Degree Courses in Surat: How to Choose"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white shadow-md">
+                  Distance Learning
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                  12 min read
+                </span>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="text-xs text-slate-400 mb-2 font-medium">
+                  OCT 18, 2026 &nbsp;•&nbsp; edYOUcate Editorial
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-slate-900 group-hover:text-brand-red transition-colors duration-200 leading-snug mb-3">
+                  Online Degree Courses in Surat: How to Choose.
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                  Compare online degree courses in Surat by eligibility, recognition, subjects, fees, learning platform and examinations before applying.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-brand-red font-semibold text-sm">
+                <span class="inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span>Read on Blog</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </span>
+                <span class="text-xs text-slate-400 font-medium">Online Degrees</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- CARD 2: Online MBA Admission -->
+        <article
+          class="blog-card bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5 group"
+          data-category="distance-learning"
+        >
+          <a
+            href="https://blog.edyoucate.in/online-mba-admission-guide.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col h-full"
+          >
+            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img
+                src="https://blog.edyoucate.in/NIOS%20Photos/Online%20MBA%20Admission.png"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Online MBA Admission: Eligibility, Fees and University Selection"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white shadow-md">
+                  Distance Learning
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                  12 min read
+                </span>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="text-xs text-slate-400 mb-2 font-medium">
+                  OCT 17, 2026 &nbsp;•&nbsp; edYOUcate Editorial
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-slate-900 group-hover:text-brand-red transition-colors duration-200 leading-snug mb-3">
+                  Online MBA Admission: Eligibility, Fees and University Selection.
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                  Compare online MBA admission eligibility, AICTE/UGC approvals, specialisations, fees and university selection checklist.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-brand-red font-semibold text-sm">
+                <span class="inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span>Read on Blog</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </span>
+                <span class="text-xs text-slate-400 font-medium">Online MBA</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- CARD 3: UGC Recognition -->
+        <article
+          class="blog-card bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5 group"
+          data-category="distance-learning"
+        >
+          <a
+            href="https://blog.edyoucate.in/how-to-check-ugc-recognition.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col h-full"
+          >
+            <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img
+                src="https://blog.edyoucate.in/NIOS%20Photos/how%20to%20check%20ugc%20recognition%20for%20online%20degrees.png"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="How to Check UGC Recognition for Online Degrees"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-red text-white shadow-md">
+                  Distance Learning
+                </span>
+              </div>
+              <div class="absolute bottom-3 right-3">
+                <span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                  12 min read
+                </span>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="text-xs text-slate-400 mb-2 font-medium">
+                  OCT 16, 2026 &nbsp;•&nbsp; edYOUcate Editorial
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-slate-900 group-hover:text-brand-red transition-colors duration-200 leading-snug mb-3">
+                  How to Check UGC Recognition for Online Degrees.
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                  Learn how to verify UGC-DEB recognition for an online degree: check university, exact programme, learning mode and academic session.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-brand-red font-semibold text-sm">
+                <span class="inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span>Read on Blog</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </span>
+                <span class="text-xs text-slate-400 font-medium">UGC-DEB</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE BLOG AUTO-FETCH ENGINE (DISTANCE LEARNING ONLY) -->
+  <script>
+    const BLOG_ORIGIN = "https://blog.edyoucate.in";
+
+    // Live Fetch from edYOUcate Blog Website (Only Distance Learning Stories)
+    async function autoFetchLatestDistanceBlogs() {
+      const statusEl = document.getElementById("blogSyncStatus");
+      try {
+        let doc = null;
+        let fetchUrl = BLOG_ORIGIN + "/distance-learning.html";
+        
+        try {
+          const res = await fetch(fetchUrl, {
+            method: "GET",
+            headers: { "Accept": "text/html" },
+            cache: "no-cache"
+          });
+          if (res.ok) {
+            const htmlText = await res.text();
+            doc = new DOMParser().parseFromString(htmlText, "text/html");
+          }
+        } catch (e) {
+          console.warn("Direct distance-learning page fetch note:", e);
+        }
+
+        if (!doc) {
+          const resRoot = await fetch(BLOG_ORIGIN + "/", {
+            method: "GET",
+            headers: { "Accept": "text/html" },
+            cache: "no-cache"
+          });
+          if (!resRoot.ok) throw new Error("HTTP " + resRoot.status);
+          const htmlText = await resRoot.text();
+          doc = new DOMParser().parseFromString(htmlText, "text/html");
+        }
+
+        const articleElements = doc.querySelectorAll(
+          ".category-grid article, .latest-stories article, .more-stories article, article"
+        );
+        if (!articleElements || articleElements.length === 0) {
+          return;
+        }
+
+        const parsedStories = [];
+        const seenUrls = new Set();
+
+        articleElements.forEach((art) => {
+          const linkEl = art.querySelector("h3 a, h4 a, .card-content a, a");
+          if (!linkEl) return;
+
+          const rawHref = linkEl.getAttribute("href") || "";
+          if (!rawHref || rawHref.startsWith("#") || rawHref.startsWith("javascript:")) return;
+
+          const fullUrl = new URL(rawHref, BLOG_ORIGIN + "/").href;
+          if (seenUrls.has(fullUrl)) return;
+
+          const title = (linkEl.textContent || art.querySelector("h3, h4")?.textContent || "")
+            .trim()
+            .replace(/\s+/g, " ");
+
+          const badge = (art.querySelector(".card-badge, .small-card-eyebrow, .cat-eyebrow")?.textContent || "")
+            .trim()
+            .toUpperCase();
+
+          // Strict filter: only include Distance / Online learning articles, never pure NIOS articles
+          const isDistance =
+            badge.includes("DISTANCE") ||
+            badge.includes("ONLINE") ||
+            badge.includes("MBA") ||
+            badge.includes("UGC") ||
+            title.toLowerCase().includes("distance") ||
+            title.toLowerCase().includes("online degree") ||
+            title.toLowerCase().includes("online mba") ||
+            title.toLowerCase().includes("ugc") ||
+            fullUrl.toLowerCase().includes("distance") ||
+            fullUrl.toLowerCase().includes("online-degree") ||
+            fullUrl.toLowerCase().includes("online-mba") ||
+            fullUrl.toLowerCase().includes("ugc-recognition");
+
+          const isStrictNiosOnly =
+            (badge === "NIOS" || title.toLowerCase().includes("nios")) &&
+            !title.toLowerCase().includes("distance") &&
+            !badge.includes("DISTANCE");
+
+          if (!isDistance || isStrictNiosOnly) return;
+
+          seenUrls.add(fullUrl);
+
+          const excerpt = (
+            art.querySelector(".card-content p, .small-card-content p, .cat-card p, p")?.textContent || ""
+          )
+            .trim()
+            .replace(/\s+/g, " ");
+
+          const imgEl = art.querySelector(".card-image img, .small-card-image img, .cat-image img, img");
+          let imgSrc = imgEl?.getAttribute("src") || "";
+          if (imgSrc) {
+            imgSrc = new URL(imgSrc, BLOG_ORIGIN + "/").href;
+          } else {
+            imgSrc =
+              "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+          }
+
+          const dateAttr = art.getAttribute("data-date") || "";
+          let timestamp = 0;
+          if (dateAttr) {
+            timestamp = new Date(dateAttr).getTime() || 0;
+          }
+
+          let metaDate = "OCT 18, 2026";
+          if (dateAttr) {
+            const parts = dateAttr.split("-");
+            if (parts.length === 3) {
+              const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+              const mIdx = parseInt(parts[1], 10) - 1;
+              metaDate = `${months[mIdx] || "OCT"} ${parseInt(parts[2], 10)}, ${parts[0]}`;
+            }
+          }
+
+          let readTime = "12 min read";
+          const readTimeEl = art.querySelector(".cat-read-time");
+          if (readTimeEl) {
+            readTime = readTimeEl.textContent.trim();
+          }
+
+          let meta = `${metaDate} • ${readTime}`;
+
+          let categoryLabel = "Distance Learning";
+          let tagLabel = "Distance Learning";
+          const titleLower = title.toLowerCase();
+          if (titleLower.includes("mba")) tagLabel = "Online MBA";
+          else if (titleLower.includes("degree")) tagLabel = "Online Degrees";
+          else if (titleLower.includes("ugc")) tagLabel = "UGC-DEB";
+          else if (titleLower.includes("surat") || titleLower.includes("distance")) tagLabel = "Distance Guide";
+
+          parsedStories.push({
+            title,
+            url: fullUrl,
+            imgSrc,
+            meta,
+            metaDate,
+            readTime,
+            timestamp,
+            badge: "Distance Learning",
+            category: "distance-learning",
+            categoryLabel,
+            tagLabel,
+            badgeBg: "bg-brand-red text-white",
+            excerpt
+          });
+        });
+
+        if (parsedStories.length > 0) {
+          // Sort newest first if timestamps are present
+          if (parsedStories.some((s) => s.timestamp > 0)) {
+            parsedStories.sort((a, b) => b.timestamp - a.timestamp);
+          }
+          renderFetchedBlogs(parsedStories);
+          if (statusEl) {
+            statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Auto-synced (${parsedStories.length} Distance guides live from blog.edyoucate)`;
+          }
+        }
+      } catch (err) {
+        console.info("edYOUcate distance blog auto-fetch note:", err.message);
+        if (statusEl) {
+          statusEl.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Auto-synced with blog.edyoucate`;
+        }
+      }
+    }
+
+    function renderFetchedBlogs(stories) {
+      if (!stories || stories.length === 0) return;
+
+      // 1. DYNAMICALLY UPDATE THE MAIN BIG CARD WITH THE MOST RECENT ARTICLE (stories[0])
+      const mostRecent = stories[0];
+      const featuredLinkEl = document.getElementById("featuredBlogLink");
+      const featuredImgEl = document.getElementById("featuredBlogImg");
+      const featuredMetaEl = document.getElementById("featuredBlogMeta");
+      const featuredTitleEl = document.getElementById("featuredBlogTitle");
+      const featuredExcerptEl = document.getElementById("featuredBlogExcerpt");
+      const featuredBadgeEl = document.getElementById("featuredBlogBadge");
+
+      if (featuredLinkEl) featuredLinkEl.href = mostRecent.url;
+      if (featuredImgEl) {
+        featuredImgEl.src = mostRecent.imgSrc;
+        featuredImgEl.alt = mostRecent.title;
+      }
+      const featuredReadTimeBadge = document.getElementById("featuredBlogReadTimeBadge");
+      if (featuredReadTimeBadge) {
+        featuredReadTimeBadge.textContent = mostRecent.readTime || "12 min read";
+      }
+      if (featuredMetaEl) {
+        featuredMetaEl.innerHTML = `
+          <span>${mostRecent.metaDate || "OCT 18, 2026"}</span>
+          <span class="hidden lg:inline">•</span>
+          <span class="hidden lg:inline">${mostRecent.readTime ? mostRecent.readTime.toUpperCase() : "12 MIN READ"}</span>
+          <span>•</span>
+          <span>BY EDYOUCATE EDITORIAL</span>
+        `;
+      }
+      if (featuredTitleEl) {
+        featuredTitleEl.textContent = mostRecent.title.endsWith(".") ? mostRecent.title : mostRecent.title + ".";
+      }
+      if (featuredExcerptEl && mostRecent.excerpt) {
+        featuredExcerptEl.textContent = mostRecent.excerpt;
+      }
+      if (featuredBadgeEl) {
+        featuredBadgeEl.innerHTML = `<i class="fa-solid fa-star text-[10px]"></i> LATEST / DISTANCE LEARNING`;
+      }
+
+      // 2. RENDER THE NEXT 3 MOST RECENT ARTICLES BELOW (stories.slice(1, 4)) - NO DUPLICATE!
+      const gridContainer = document.getElementById("blogCardsGrid");
+      if (gridContainer) {
+        const nextRecentStories = stories.slice(1, 4);
+        gridContainer.innerHTML = nextRecentStories
+          .map(
+            (story) => `
+          <article
+            class="blog-card bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5 group"
+            data-category="${story.category}"
+          >
+            <a
+              href="${story.url}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-col h-full"
+            >
+              <div class="h-48 sm:h-52 relative overflow-hidden bg-slate-100 border-b border-slate-100">
+                <img
+                  src="${story.imgSrc}"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                  alt="${story.title.replace(/"/g, "&quot;")}"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute top-3 left-3">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${story.badgeBg} shadow-md">
+                    ${story.categoryLabel}
+                  </span>
+                </div>
+                <div class="absolute bottom-3 right-3">
+                  <span class="text-xs font-semibold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                    ${story.readTime || "12 min read"}
+                  </span>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="text-xs text-slate-400 mb-2 font-medium">
+                    ${story.metaDate || "OCT 2026"} &nbsp;•&nbsp; edYOUcate Editorial
+                  </div>
+                  <h3 class="text-lg sm:text-xl font-bold font-heading text-slate-900 group-hover:text-brand-red transition-colors duration-200 leading-snug mb-3">
+                    ${story.title}
+                  </h3>
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                    ${story.excerpt}
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-brand-red font-semibold text-sm">
+                  <span class="inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    <span>Read on Blog</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                  </span>
+                  <span class="text-xs text-slate-400 font-medium">${story.tagLabel || "blog.edyoucate.in"}</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        `
+          )
+          .join("");
+      }
+    }
+
+    // Auto-fetch on DOM ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", autoFetchLatestDistanceBlogs);
+    } else {
+      autoFetchLatestDistanceBlogs();
+    }
+  </script>
+
   <!-- ===================== REVIEWS ===================== -->
   <style>
     @keyframes marquee {
@@ -2554,6 +3167,12 @@
               <a href="#universities" class="hover:text-white hover:translate-x-1 transition-all inline-block">
                 <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i>
                 Universities
+              </a>
+            </li>
+            <li>
+              <a href="#blogs" class="hover:text-white hover:translate-x-1 transition-all inline-block">
+                <i class="ti ti-chevron-right text-brand-red text-sm mr-1"></i>
+                Blogs
               </a>
             </li>
             <li>

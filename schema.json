@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://online.edyoucate.in/#website",
+      "url": "https://online.edyoucate.in/",
+      "name": "edYOUcate | Online & Distance Education",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://www.edyoucate.in/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://online.edyoucate.in/#webpage",
+      "url": "https://online.edyoucate.in/",
+      "name": "Online & Distance Education Consultancy in Surat | edYOUcate",
+      "isPartOf": {
+        "@id": "https://online.edyoucate.in/#website"
+      },
+      "about": {
+        "@id": "https://online.edyoucate.in/#service"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://online.edyoucate.in/#service",
+      "name": "Online and Distance Education Admission Counselling",
+      "serviceType": "Online and distance university admission guidance",
+      "description": "Counselling and admission guidance for learners exploring online and distance higher education programmes, including undergraduate and postgraduate options.",
+      "url": "https://online.edyoucate.in/",
+      "provider": {
+        "@id": "https://www.edyoucate.in/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "India"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Higher Education Guidance Categories",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Undergraduate degree guidance"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Postgraduate degree guidance"
+          }
+        ]
+      }
+    }
+  ]
+}
+
